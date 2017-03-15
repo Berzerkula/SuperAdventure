@@ -106,7 +106,7 @@ namespace SuperAdventure
                     if (!playerAlreadyCompletedQuest)
                     {
                         // See if the player has all the items needed to complete the quest
-                        bool playerHasAllItemsToCompleteQuest = true;
+                        bool playerHasAllItemsToCompleteQuest = _player.HasAllQuestCompletionItems(newLocation.QuestAvailableHere);
 
                         foreach (QuestCompletionItem qci in newLocation.QuestAvailableHere.QuestCompletionItems)
                         {
