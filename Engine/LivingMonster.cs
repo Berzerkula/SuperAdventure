@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    class LivingMonster
+    public class LivingMonster
     {
+        public int CurrentHitPoints { get; set; }
+        public int MaximumHitPoints { get; set; }
     }
 }
