@@ -13,8 +13,8 @@ namespace Engine
 
         public LivingCreature(int currentHitPoints, int maximumHitPoints)
         {
-            int CurrentHitPoints = currentHitPoints;
-            int MaximumHitPoints = maximumHitPoints;
+            CurrentHitPoints = currentHitPoints;
+            MaximumHitPoints = maximumHitPoints;
         }
     }
 }
