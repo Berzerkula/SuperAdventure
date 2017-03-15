@@ -82,8 +82,9 @@ namespace SuperAdventure
             if (newLocation.QuestAvailableHere != null)
             {
                 // See if the player already has the quest, and if they've completed it
-                bool playerAlreadyHasQuest = false;
-                bool playerAlreadyCompletedQuest = false;
+                bool playerAlreadyHasQuest = _player.HasThisQuest(newLocation.QuestAvailableHere);
+                bool playerAlreadyCompletedQuest = _player.CompletedThisQuest(newLocation.QuestAvailableHere);
+
 
                 foreach (PlayerQuest playerQuest in _player.Quests)
                 {
