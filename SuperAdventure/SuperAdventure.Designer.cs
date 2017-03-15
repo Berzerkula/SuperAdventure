@@ -45,6 +45,8 @@
             this.btnEast = new System.Windows.Forms.Button();
             this.btnSouth = new System.Windows.Forms.Button();
             this.btnWest = new System.Windows.Forms.Button();
+            this.rtbLocation = new System.Windows.Forms.RichTextBox();
+            this.rtbMessages = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -194,11 +196,31 @@
             this.btnWest.Text = "West";
             this.btnWest.UseVisualStyleBackColor = true;
             // 
+            // rtbLocation
+            // 
+            this.rtbLocation.Location = new System.Drawing.Point(347, 19);
+            this.rtbLocation.Name = "rtbLocation";
+            this.rtbLocation.ReadOnly = true;
+            this.rtbLocation.Size = new System.Drawing.Size(360, 105);
+            this.rtbLocation.TabIndex = 17;
+            this.rtbLocation.Text = "";
+            // 
+            // rtbMessages
+            // 
+            this.rtbMessages.Location = new System.Drawing.Point(347, 130);
+            this.rtbMessages.Name = "rtbMessages";
+            this.rtbMessages.ReadOnly = true;
+            this.rtbMessages.Size = new System.Drawing.Size(360, 286);
+            this.rtbMessages.TabIndex = 18;
+            this.rtbMessages.Text = "";
+            // 
             // SuperAdventure
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(727, 663);
+            this.Controls.Add(this.rtbMessages);
+            this.Controls.Add(this.rtbLocation);
             this.Controls.Add(this.btnWest);
             this.Controls.Add(this.btnSouth);
             this.Controls.Add(this.btnEast);
@@ -242,6 +264,8 @@
         private System.Windows.Forms.Button btnEast;
         private System.Windows.Forms.Button btnSouth;
         private System.Windows.Forms.Button btnWest;
+        private System.Windows.Forms.RichTextBox rtbLocation;
+        private System.Windows.Forms.RichTextBox rtbMessages;
     }
 }
 
