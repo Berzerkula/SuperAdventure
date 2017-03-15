@@ -19,8 +19,6 @@ namespace SuperAdventure
         {
             InitializeComponent();
 
-            Location location = new Location(1, "Home", "This is your house.");
-
             _player = new Player(10, 10, 20, 0, 1);
 
             lblHitPoints.Text = _player.CurrentHitPoints.ToString();
