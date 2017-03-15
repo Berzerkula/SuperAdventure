@@ -14,6 +14,8 @@ namespace SuperAdventure
     public partial class SuperAdventure : Form
     {
         private Player _player;
+        private Monster _currentMonster;
+
 
         public SuperAdventure()
         {
