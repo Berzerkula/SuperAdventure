@@ -37,6 +37,8 @@
             this.lblExperience = new System.Windows.Forms.Label();
             this.lblLevel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.cboWeapons = new System.Windows.Forms.ComboBox();
+            this.cboPotions = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -116,11 +118,29 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Select action";
             // 
+            // cboWeapons
+            // 
+            this.cboWeapons.FormattingEnabled = true;
+            this.cboWeapons.Location = new System.Drawing.Point(369, 559);
+            this.cboWeapons.Name = "cboWeapons";
+            this.cboWeapons.Size = new System.Drawing.Size(121, 21);
+            this.cboWeapons.TabIndex = 9;
+            // 
+            // cboPotions
+            // 
+            this.cboPotions.FormattingEnabled = true;
+            this.cboPotions.Location = new System.Drawing.Point(369, 593);
+            this.cboPotions.Name = "cboPotions";
+            this.cboPotions.Size = new System.Drawing.Size(121, 21);
+            this.cboPotions.TabIndex = 10;
+            // 
             // SuperAdventure
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(727, 663);
+            this.Controls.Add(this.cboPotions);
+            this.Controls.Add(this.cboWeapons);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblLevel);
             this.Controls.Add(this.lblExperience);
@@ -148,6 +168,8 @@
         private System.Windows.Forms.Label lblExperience;
         private System.Windows.Forms.Label lblLevel;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cboWeapons;
+        private System.Windows.Forms.ComboBox cboPotions;
     }
 }
 
