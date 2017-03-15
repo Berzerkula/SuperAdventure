@@ -28,20 +28,114 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblHitPoints = new System.Windows.Forms.Label();
+            this.lblGold = new System.Windows.Forms.Label();
+            this.lvlExperience = new System.Windows.Forms.Label();
+            this.lvlLevel = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Hit Points:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(18, 46);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Gold:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(18, 74);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Experience:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 100);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Level:";
+            // 
+            // lblHitPoints
+            // 
+            this.lblHitPoints.AutoSize = true;
+            this.lblHitPoints.Location = new System.Drawing.Point(110, 19);
+            this.lblHitPoints.Name = "lblHitPoints";
+            this.lblHitPoints.Size = new System.Drawing.Size(0, 13);
+            this.lblHitPoints.TabIndex = 4;
+            // 
+            // lblGold
+            // 
+            this.lblGold.AutoSize = true;
+            this.lblGold.Location = new System.Drawing.Point(110, 45);
+            this.lblGold.Name = "lblGold";
+            this.lblGold.Size = new System.Drawing.Size(0, 13);
+            this.lblGold.TabIndex = 5;
+            // 
+            // lvlExperience
+            // 
+            this.lvlExperience.AutoSize = true;
+            this.lvlExperience.Location = new System.Drawing.Point(110, 73);
+            this.lvlExperience.Name = "lvlExperience";
+            this.lvlExperience.Size = new System.Drawing.Size(0, 13);
+            this.lvlExperience.TabIndex = 6;
+            // 
+            // lvlLevel
+            // 
+            this.lvlLevel.AutoSize = true;
+            this.lvlLevel.Location = new System.Drawing.Point(110, 99);
+            this.lvlLevel.Name = "lvlLevel";
+            this.lvlLevel.Size = new System.Drawing.Size(0, 13);
+            this.lvlLevel.TabIndex = 7;
             // 
             // SuperAdventure
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(727, 663);
+            this.Controls.Add(this.lvlLevel);
+            this.Controls.Add(this.lvlExperience);
+            this.Controls.Add(this.lblGold);
+            this.Controls.Add(this.lblHitPoints);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Name = "SuperAdventure";
             this.Text = "My Game";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblHitPoints;
+        private System.Windows.Forms.Label lblGold;
+        private System.Windows.Forms.Label lvlExperience;
+        private System.Windows.Forms.Label lvlLevel;
     }
 }
 
