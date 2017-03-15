@@ -168,18 +168,7 @@ namespace SuperAdventure
                             // Add the reward item to the player's inventory
                             bool addedItemToPlayerInventory = false;
 
-                            foreach (InventoryItem ii in _player.Inventory)
-                            {
-                                if (ii.Details.ID == newLocation.QuestAvailableHere.RewardItem.ID)
-                                {
-                                    // They have the item in their inventory, so increase the quantity by one
-                                    ii.Quantity++;
-
-                                    addedItemToPlayerInventory = true;
-
-                                    break;
-                                }
-                            }
+                            _player.AddItemToInventory(newLocation.QuestAvailableHere.RewardItem);
 
                             // They didn't have the item, so add it to their inventory, with a quantity of 1
                             if (!addedItemToPlayerInventory)
