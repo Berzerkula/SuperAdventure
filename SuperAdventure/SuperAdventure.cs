@@ -15,7 +15,6 @@ namespace SuperAdventure
     public partial class SuperAdventure : Form
     {
         private Player _player;
-        private Monster _currentMonster;
 
         private const string PLAYER_DATA_FILE_NAME = "PlayerData.xml";
 
