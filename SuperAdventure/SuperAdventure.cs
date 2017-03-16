@@ -89,7 +89,7 @@ namespace SuperAdventure
 
             _player.PropertyChanged += PlayerOnPropertyChanged;
 
-            MoveTo(_player.CurrentLocation);
+            _player.MoveTo(_player.CurrentLocation);
         }
 
         private void PlayerOnPropertyChanged(object sender, PropertyChangedEventArgs propertyChangedEventArgs)
