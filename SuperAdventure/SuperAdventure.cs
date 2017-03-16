@@ -384,14 +384,7 @@ namespace SuperAdventure
             }
 
             // Remove the potion from the player's inventory
-            foreach (InventoryItem ii in _player.Inventory)
-            {
-                if (ii.Details.ID == potion.ID)
-                {
-                    ii.Quantity--;
-                    break;
-                }
-            }
+            _player.RemoveItemFromInventory(potion, 1);
 
             // Display message
             rtbMessages.Text += "You drink a " + potion.Name + Environment.NewLine;
