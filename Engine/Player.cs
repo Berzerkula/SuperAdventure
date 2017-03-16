@@ -56,7 +56,6 @@ namespace Engine
 
         public Weapon CurrentWeapon { get; set; }
         public BindingList<InventoryItem> Inventory { get; set; }
-        public BindingList<PlayerQuest> Quests { get; set; }
 
         public List<Weapon> Weapons
         {
