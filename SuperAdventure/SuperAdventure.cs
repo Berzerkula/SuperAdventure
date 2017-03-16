@@ -88,7 +88,7 @@ namespace SuperAdventure
             cboPotions.ValueMember = "Id";
 
             _player.PropertyChanged += PlayerOnPropertyChanged;
-            _player.OnMessage += DisplayMessage();
+            _player.OnMessage += DisplayMessage;
 
             _player.MoveTo(_player.CurrentLocation);
         }
