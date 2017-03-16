@@ -26,9 +26,7 @@ namespace Engine
         public int ExperiencePoints
         {
             get
-            {
-                return _experiencePoints;
-            }
+            { return _experiencePoints; }
             private set
             {
                 _experiencePoints = value;
