@@ -213,7 +213,7 @@ namespace Engine
 
         public void RemoveItemFromInventory(Item itemToRemove, int quantity = 1)
         {
-            InventoryItem item = Inventory.SingleOrDeafult(ii => ii.Details.ID == itemToRemove.ID);
+            InventoryItem item = Inventory.SingleOrDefault(ii => ii.Details.ID == itemToRemove.ID);
 
             if (item == null)
             {
