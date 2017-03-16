@@ -93,6 +93,19 @@ namespace SuperAdventure
             _player.MoveTo(_player.CurrentLocation);
         }
 
+        private void DisplayMessage(object sender, MessageEventArgs messageEventArgs)
+        {
+            rtbMessages.Text += messageEventArgs.Message + Environment.NewLine;
+
+            if (messageEventArgs.AddExtraNewLine)
+            {
+                rtbMessages.Text += Environment.NewLine;
+            }
+
+            rtbMessages.SelectionStart = rtbMessages.Text.Length;
+            rtbMessages.ScrollToCaret();
+        }
+
         private void PlayerOnPropertyChanged(object sender, PropertyChangedEventArgs propertyChangedEventArgs)
         {
             if (propertyChangedEventArgs.PropertyName == "Weapons")
