@@ -25,12 +25,7 @@ namespace SuperAdventure
             _player.Inventory.Add(new InventoryItem(World.ItemByID(World.ITEM_ID_RUSTY_SWORD), 1));
 
             UpdatePlayerStats();
-
-            lblHitPoints.Text = _player.CurrentHitPoints.ToString();
-            lblGold.Text = _player.Gold.ToString();
-            lblExperience.Text = _player.ExperiencePoints.ToString();
-            lblLevel.Text = _player.Level.ToString();
-        }
+         }
 
         private void btnNorth_Click(object sender, EventArgs e)
         {
