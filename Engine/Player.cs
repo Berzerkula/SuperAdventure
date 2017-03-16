@@ -12,6 +12,7 @@ namespace Engine
     {
         private int _gold;
         private int _experiencePoints;
+        private Location _currentLocation;
 
         public int Gold
         {
