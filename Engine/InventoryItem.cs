@@ -9,8 +9,18 @@ namespace Engine
 {
     public class InventoryItem : INotifyPropertyChanged
     {
-        public Item Details { get; set; }
+        private Item _details;
         public int Quantity { get; set; }
+
+        public Item Details
+        {
+            get { return _details; }
+            set
+            {
+                _details = value;
+                OnPropertyChanged("Details");
+            }
+        }
 
         public InventoryItem(Item details, int quantity)
         {
