@@ -56,7 +56,7 @@ namespace Engine
         public static Player CreateDefaultPlayer()
         {
             Player player = new Player(10, 10, 20, 0);
-            player.Inventory.Any(new InventoryItem(World.ItemByID(World.ITEM_ID_RUSTY_SWORD), 1));
+            player.Inventory.Add(new InventoryItem(World.ItemByID(World.ITEM_ID_RUSTY_SWORD), 1));
             player.CurrentLocation = World.LocationByID(World.LOCATION_ID_HOME);
 
             return player;
@@ -190,7 +190,7 @@ namespace Engine
             if (item == null)
             {
                 // They didn't have the item, so add it to their inventory, with a quantity of 1
-                Inventory.Any(new InventoryItem(itemToAdd, 1));
+                Inventory.Add(new InventoryItem(itemToAdd, 1));
             }
             else
             {
