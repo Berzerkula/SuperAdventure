@@ -10,7 +10,7 @@ namespace Engine
     public class InventoryItem : INotifyPropertyChanged
     {
         private Item _details;
-        public int Quantity { get; set; }
+        private int _quantity;
 
         public Item Details
         {
@@ -22,10 +22,15 @@ namespace Engine
             }
         }
 
-        public InventoryItem(Item details, int quantity)
+        public int Quantity
         {
-            Details = details;
-            Quantity = quantity;
+            get { return _quantity; }
+            set
+            {
+                _quantity = value;
+                OnPropertyChanged("Quantity");
+                OnPropertyChanged("Description");
+            }
         }
     }
 
@@ -37,5 +42,10 @@ namespace Engine
         {
             PropertyChanged(this, new PropertyChangedEventArgs(name));
         }
+    }
+
+    public string Description
+    {
+        get { return Quantity > 1 ? Details.NamePlural : Details.Name; }
     }
 }
