@@ -268,6 +268,7 @@
             this.btnClearRtbMessages.TabIndex = 21;
             this.btnClearRtbMessages.Text = "Clear";
             this.btnClearRtbMessages.UseVisualStyleBackColor = true;
+            this.btnClearRtbMessages.Click += new System.EventHandler(this.btnClearRtbMessages_Click);
             // 
             // SuperAdventure
             // 
