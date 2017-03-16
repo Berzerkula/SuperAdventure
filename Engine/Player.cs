@@ -183,12 +183,12 @@ namespace Engine
         {
             foreach (QuestCompletionItem qci in quest.QuestCompletionItems)
             {
-                // Subtrace the quantity from the player's inventory that was needed to complete the quest.
-                InventoryItem Item = Inventory.SingleOrDefault(ii => ii.Details.ID == qci.Details.ID);
+                InventoryItem item = Inventory.SingleOrDefault(ii => ii.Details.ID == qci.Details.ID);
 
-                if (Item != null)
+                if (item != null)
                 {
-                    RemoveItemFromInventory(Item.Details, qci.Quantity);
+                    // Subtract the quantity from the player's inventory that was needed to complete the quest
+                    item.Quantity -= qci.Quantity;
                 }
             }
         }
