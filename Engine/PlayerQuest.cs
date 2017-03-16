@@ -43,15 +43,15 @@ namespace Engine
             Details = details;
             IsCompleted = false;
         }
-    }
 
-    public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
 
-    protected void OnPropertyChanged(string name)
-    {
-        if(PropertyChanged != null)
+        protected void OnPropertyChanged(string name)
         {
-            PropertyChanged(this, new PropertyChangedEventArgs(name));
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(name));
+            }
         }
     }
 }
