@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,7 +43,7 @@ namespace Engine
         }
         public Location CurrentLocation { get; set; }
         public Weapon CurrentWeapon { get; set; }
-        public List<InventoryItem> Inventory { get; set; }
+        public BindingList<InventoryItem> Inventory { get; set; }
         public List<PlayerQuest> Quests { get; set; }
 
         private Player(int currentHitPoints, int maximumHitPoints, int gold, int experiencePoints) : base(currentHitPoints, maximumHitPoints)
@@ -50,14 +51,14 @@ namespace Engine
             Gold = gold;
             ExperiencePoints = experiencePoints;
 
-            Inventory = new List<InventoryItem>();
+            Inventory = new BindingList<InventoryItem>();
             Quests = new List<PlayerQuest>();
         }
 
         public static Player CreateDefaultPlayer()
         {
             Player player = new Player(10, 10, 20, 0);
-            player.Inventory.Add(new InventoryItem(World.ItemByID(World.ITEM_ID_RUSTY_SWORD), 1));
+            player.Inventory.Any(new InventoryItem(World.ItemByID(World.ITEM_ID_RUSTY_SWORD), 1));
             player.CurrentLocation = World.LocationByID(World.LOCATION_ID_HOME);
 
             return player;
@@ -191,7 +192,7 @@ namespace Engine
             if (item == null)
             {
                 // They didn't have the item, so add it to their inventory, with a quantity of 1
-                Inventory.Add(new InventoryItem(itemToAdd, 1));
+                Inventory.Any(new InventoryItem(itemToAdd, 1));
             }
             else
             {
