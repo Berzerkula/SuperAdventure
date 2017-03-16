@@ -32,20 +32,27 @@ namespace Engine
                 OnPropertyChanged("Description");
             }
         }
-    }
 
-    public event PropertyChangedEventHandler PropertyChanged;
-
-    protected void OnPropertyChanged(string name)
-    {
-        if(PropertyChanged != null)
+        public string Description
         {
-            PropertyChanged(this, new PropertyChangedEventArgs(name));
+            get { return Quantity > 1 ? Details.NamePlural : Details.Name; }
         }
-    }
 
-    public string Description
-    {
-        get { return Quantity > 1 ? Details.NamePlural : Details.Name; }
+
+        public InventoryItem(Item details, int quantity)
+        {
+            Details = detials;
+            Quantity = quantity;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged(string name)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(name));
+            }
+        }
     }
 }
