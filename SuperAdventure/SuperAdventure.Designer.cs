@@ -274,7 +274,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(727, 663);
-            this.Controls.Add(this.btnClearRtbMessages);
             this.Controls.Add(this.dgvQuests);
             this.Controls.Add(this.dgvInventory);
             this.Controls.Add(this.rtbMessages);
@@ -285,6 +284,7 @@
             this.Controls.Add(this.btnNorth);
             this.Controls.Add(this.btnUsePotion);
             this.Controls.Add(this.btnUseWeapon);
+            this.Controls.Add(this.btnClearRtbMessages);
             this.Controls.Add(this.cboPotions);
             this.Controls.Add(this.cboWeapons);
             this.Controls.Add(this.label5);
@@ -325,11 +325,11 @@
         private System.Windows.Forms.Button btnEast;
         private System.Windows.Forms.Button btnSouth;
         private System.Windows.Forms.Button btnWest;
+        private System.Windows.Forms.Button btnClearRtbMessages;
         private System.Windows.Forms.RichTextBox rtbLocation;
         private System.Windows.Forms.RichTextBox rtbMessages;
         private System.Windows.Forms.DataGridView dgvInventory;
         private System.Windows.Forms.DataGridView dgvQuests;
-        private System.Windows.Forms.Button btnClearRtbMessages;
     }
 }
 
