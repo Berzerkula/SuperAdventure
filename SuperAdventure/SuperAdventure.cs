@@ -210,6 +210,10 @@ namespace SuperAdventure
             _player.CurrentWeapon = (Weapon)cboWeapons.SelectedItem;
         }
 
+        private void btnTrade_Click(object sender, EventArgs e)
+        {
+        }
+
         private void btnClearRtbMessages_Click(object sender, EventArgs e)
         {
             rtbMessages.Clear();
