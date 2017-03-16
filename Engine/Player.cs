@@ -9,7 +9,17 @@ namespace Engine
 {
     public class Player : LivingCreature
     {
-        public int Gold { get; set; }
+        private int _gold;
+
+        public int Gold
+        {
+            get { return _gold; }
+            set
+            {
+                _gold = value;
+                OnPropertyChanged("Gold");
+            }
+        }
         public int ExperiencePoints { get; private set; }
         public int Level
         {
