@@ -266,40 +266,6 @@ namespace SuperAdventure
                 btnUseWeapon.Visible = false;
                 btnUsePotion.Visible = false;
             }
-
-            // Refresh player's potions combobox
-            UpdatePotionListInUI();
-        }
-
-        private void UpdatePotionListInUI()
-        {
-            List<HealingPotion> healingPotions = new List<HealingPotion>();
-
-            foreach (InventoryItem inventoryItem in _player.Inventory)
-            {
-                if (inventoryItem.Details is HealingPotion)
-                {
-                    if (inventoryItem.Quantity > 0)
-                    {
-                        healingPotions.Add((HealingPotion)inventoryItem.Details);
-                    }
-                }
-            }
-
-            if (healingPotions.Count == 0)
-            {
-                // The player doesn't have any potions, so hide the potion combobox and "Use" button
-                cboPotions.Visible = false;
-                btnUsePotion.Visible = false;
-            }
-            else
-            {
-                cboPotions.DataSource = healingPotions;
-                cboPotions.DisplayMember = "Name";
-                cboPotions.ValueMember = "ID";
-
-                cboPotions.SelectedIndex = 0;
-            }
         }
 
         private void btnUseWeapon_Click(object sender, EventArgs e)
@@ -369,8 +335,6 @@ namespace SuperAdventure
                         rtbMessages.Text += "You loot " + inventoryItem.Quantity.ToString() + " " + inventoryItem.Details.NamePlural + Environment.NewLine;
                     }
                 }
-
-                UpdatePotionListInUI();
 
                 // Add a blank line to the messages box, just for appearance.
                 rtbMessages.Text += Environment.NewLine;
@@ -454,7 +418,6 @@ namespace SuperAdventure
 
             // Refresh player data in UI
             lblHitPoints.Text = _player.CurrentHitPoints.ToString();
-            UpdatePotionListInUI();
         }
 
         private void rtbMessages_TextChanged(object sender, EventArgs e)
