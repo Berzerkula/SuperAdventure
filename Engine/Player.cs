@@ -400,6 +400,11 @@ namespace Engine
             }
         }
 
+        private void MoveHome()
+        {
+            MoveTo(World.LocationByID(World.LOCATION_ID_HOME));
+        }
+
         public void MoveNorth()
         {
             if(CurrentLocation.LocationToNorth != null)
