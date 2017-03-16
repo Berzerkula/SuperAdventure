@@ -479,5 +479,10 @@ namespace SuperAdventure
         {
             File.WriteAllText(PLAYER_DATA_FILE_NAME, _player.ToXmlString());
         }
+
+        private void cboWeapons_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _player.CurrentWeapon = (Weapon)cboWeapons.SelectedItem;
+        }
     }
 }
