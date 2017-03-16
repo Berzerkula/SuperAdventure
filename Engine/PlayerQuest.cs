@@ -33,6 +33,11 @@ namespace Engine
             }
         }
 
+        public string Name
+        {
+            get { return Details.Name; }
+        }
+
         public PlayerQuest(Quest details)
         {
             Details = details;
