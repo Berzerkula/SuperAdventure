@@ -10,7 +10,7 @@ namespace Engine
     public class PlayerQuest : INotifyPropertyChanged
     {
         private Quest _details;
-        public bool IsCompleted { get; set; }
+        private bool _isCompleted;
 
         public Quest Details
         {
@@ -19,6 +19,17 @@ namespace Engine
             {
                 _details = value;
                 OnPropertyChanged("Details");
+            }
+        }
+
+        public bool IsCompleted
+        {
+            get { return _isCompleted; }
+            set
+            {
+                _isCompleted = value;
+                OnPropertyChanged("IsCompleted");
+                OnPropertyChanged("Name");
             }
         }
 
