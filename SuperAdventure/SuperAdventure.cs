@@ -225,31 +225,11 @@ namespace SuperAdventure
                 btnUsePotion.Visible = false;
             }
 
-            // Refresh player's quest list
-            UpdateQuestListInUI();
-
             // Refresh player's weapons combobox
             UpdateWeaponListInUI();
 
             // Refresh player's potions combobox
             UpdatePotionListInUI();
-        }
-
-        private void UpdateQuestListInUI()
-        {
-            dgvQuests.RowHeadersVisible = false;
-
-            dgvQuests.ColumnCount = 2;
-            dgvQuests.Columns[0].Name = "Name";
-            dgvQuests.Columns[0].Width = 197;
-            dgvQuests.Columns[1].Name = "Done?";
-
-            dgvQuests.Rows.Clear();
-
-            foreach (PlayerQuest playerQuest in _player.Quests)
-            {
-                dgvQuests.Rows.Add(new[] { playerQuest.Details.Name, playerQuest.IsCompleted.ToString() });
-            }
         }
 
         private void UpdateWeaponListInUI()
