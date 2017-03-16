@@ -15,6 +15,8 @@ namespace Engine
         private Location _currentLocation;
         private Monster _currentMonster;
 
+        public event EventHandler<MessageEventArgs> OnMessage;
+
         public int Gold
         {
             get { return _gold; }
@@ -266,6 +268,14 @@ namespace Engine
             if (playerQuest != null)
             {
                 playerQuest.IsCompleted = true;
+            }
+        }
+
+        private void RaiseMessage(string message, bool addExtraNewLine = false)
+        {
+            if (OnMessage != null)
+            {
+                OnMessage(this, new MessageEventArgs(message, addExtraNewLine));
             }
         }
 
