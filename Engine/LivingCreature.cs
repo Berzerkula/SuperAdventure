@@ -9,7 +9,17 @@ namespace Engine
 {
     public class LivingCreature : INotifyPropertyChanged
     {
-        public int CurrentHitPoints { get; set; }
+        private int _currentHitPoints;
+
+        public int CurrentHitPoints
+        {
+            get { return _currentHitPoints; }
+            set
+            {
+                _currentHitPoints = value;
+                OnPropertyChanged("CurrentHitPoints");
+            }
+        }
         public int MaximumHitPoints { get; set; }
 
         public LivingCreature(int currentHitPoints, int maximumHitPoints)
