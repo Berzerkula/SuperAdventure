@@ -209,6 +209,19 @@ namespace Engine
             }
         }
 
+        private void RaiseInventoryChangedEvent(Item item)
+        {
+            if (item is Weapon)
+            {
+                OnPropertyChanged("Weapons");
+            }
+
+            if (item is HealingPotion)
+            {
+                OnPropertyChanged("Potions");
+            }
+        }
+
         public void MarkQuestCompleted(Quest quest)
         {
             // Find the quest in the player's quest list
