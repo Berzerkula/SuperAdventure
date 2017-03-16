@@ -193,20 +193,22 @@ namespace Engine
             }
         }
 
-        public void AddItemToInventory(Item itemToAdd)
+        public void AddItemToInventory(Item itemToAdd, int quantity = 1)
         {
             InventoryItem item = Inventory.SingleOrDefault(ii => ii.Details.ID == itemToAdd.ID);
 
             if (item == null)
             {
-                // They didn't have the item, so add it to their inventory, with a quantity of 1
-                Inventory.Add(new InventoryItem(itemToAdd, 1));
+                // The didn't have the item, so add it to their inventory
+                Inventory.Add(new InventoryItem(itemToAdd, quantity));
             }
             else
             {
-                // They have the item in their inventory, so increase the quantity by one
-                item.Quantity++;
+                // They have the item in their inventory, so increase the quantity
+                item.Quantity += quantity;
             }
+
+            RaiseInventoryChangedEvent(itemToAdd);
         }
 
         public void RemoveItemFromInventory(Item itemToRemove, int quantity = 1)
