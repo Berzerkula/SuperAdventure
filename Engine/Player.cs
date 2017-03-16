@@ -132,7 +132,7 @@ namespace Engine
             }
 
             // See if the player has the required item in their inventory
-            return Inventory.Exists(ii => ii.Details.ID == location.ItemRequiredToEnter.ID);
+            return Inventory.Any(ii => ii.Details.ID == location.ItemRequiredToEnter.ID);
         }
 
         public bool HasThisQuest(Quest quest)
@@ -159,7 +159,7 @@ namespace Engine
             foreach (QuestCompletionItem qci in quest.QuestCompletionItems)
             {
                 // Check each item in the player's inventory, to see if they have it, and enough of it
-                if (!Inventory.Exists(ii => ii.Details.ID == qci.Details.ID && ii.Quantity >= qci.Quantity))
+                if (!Inventory.Any(ii => ii.Details.ID == qci.Details.ID && ii.Quantity >= qci.Quantity))
                 {
                     return false;
                 }
