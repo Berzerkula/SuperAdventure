@@ -14,9 +14,9 @@ namespace SuperAdventure
 {
     public partial class SuperAdventure : Form
     {
-        private Player _player;
-
         private const string PLAYER_DATA_FILE_NAME = "PlayerData.xml";
+
+        private Player _player;
 
         public SuperAdventure()
         {
