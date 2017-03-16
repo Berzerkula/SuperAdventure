@@ -38,8 +38,6 @@ namespace SuperAdventure
             lblLevel.DataBindings.Add("Text", _player, "Level");
 
             MoveTo(_player.CurrentLocation);
-
-            UpdatePlayerStats();
         }
         
         private void btnNorth_Click(object sender, EventArgs e)
