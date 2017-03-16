@@ -16,6 +16,7 @@ namespace Engine
             get { return ((ExperiencePoints / 100) + 1); }
         }
         public Location CurrentLocation { get; set; }
+        public Weapon CurrentWeapon { get; set; }
         public List<InventoryItem> Inventory { get; set; }
         public List<PlayerQuest> Quests { get; set; }
 
