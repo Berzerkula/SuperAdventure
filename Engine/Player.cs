@@ -267,6 +267,44 @@ namespace Engine
             }
         }
 
+        public void UsePotion(HealingPotion potion)
+        {
+            // Add healing amount to the player's current hit points
+            CurrentHitPoints = (CurrentHitPoints + potion.AmountToHeal);
+
+            // CurrentHitPoints cannot exceed player's MaximumHitPoints
+            if (CurrentHitPoints > MaximumHitPoints)
+            {
+                CurrentHitPoints = MaximumHitPoints;
+            }
+
+            // Remove the potion from the player's inventory
+            RemoveItemFromInventory(potion, 1);
+
+            // Display message
+            RaiseMessage("You drink a " + potion.Name);
+
+            // Monster gets their turn to attack
+
+            // Determine the amount of damage the monster does to the player
+            int damageToPlayer = RandomNumberGenerator.NumberBetween(0, _currentMonster.MaximumDamage);
+
+            // Display message
+            RaiseMessage("The " + _currentMonster.Name + " did " + damageToPlayer + " points of damage.");
+
+            // Subtract damage from player
+            CurrentHitPoints -= damageToPlayer;
+
+            if (CurrentHitPoints <= 0)
+            {
+                // Display message
+                RaiseMessage("The " + _currentMonster.Name + " killed you.");
+
+                // Move player to "Home"
+                MoveHome();
+            }
+        }
+
         public void MoveNorth()
         {
             if(CurrentLocation.LocationToNorth != null)
