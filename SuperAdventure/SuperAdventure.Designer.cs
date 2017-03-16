@@ -49,6 +49,7 @@
             this.rtbMessages = new System.Windows.Forms.RichTextBox();
             this.dgvInventory = new System.Windows.Forms.DataGridView();
             this.dgvQuests = new System.Windows.Forms.DataGridView();
+            this.btnClearRtbMessages = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuests)).BeginInit();
             this.SuspendLayout();
@@ -259,11 +260,21 @@
             this.dgvQuests.Size = new System.Drawing.Size(312, 189);
             this.dgvQuests.TabIndex = 20;
             // 
+            // btnClearRtbMessages
+            // 
+            this.btnClearRtbMessages.Location = new System.Drawing.Point(632, 427);
+            this.btnClearRtbMessages.Name = "btnClearRtbMessages";
+            this.btnClearRtbMessages.Size = new System.Drawing.Size(75, 23);
+            this.btnClearRtbMessages.TabIndex = 21;
+            this.btnClearRtbMessages.Text = "Clear";
+            this.btnClearRtbMessages.UseVisualStyleBackColor = true;
+            // 
             // SuperAdventure
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(727, 663);
+            this.Controls.Add(this.btnClearRtbMessages);
             this.Controls.Add(this.dgvQuests);
             this.Controls.Add(this.dgvInventory);
             this.Controls.Add(this.rtbMessages);
@@ -318,6 +329,7 @@
         private System.Windows.Forms.RichTextBox rtbMessages;
         private System.Windows.Forms.DataGridView dgvInventory;
         private System.Windows.Forms.DataGridView dgvQuests;
+        private System.Windows.Forms.Button btnClearRtbMessages;
     }
 }
 
