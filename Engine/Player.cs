@@ -10,6 +10,7 @@ namespace Engine
     public class Player : LivingCreature
     {
         private int _gold;
+        private int _experiencePoints;
 
         public int Gold
         {
@@ -20,7 +21,21 @@ namespace Engine
                 OnPropertyChanged("Gold");
             }
         }
-        public int ExperiencePoints { get; private set; }
+
+        public int ExperiencePoints
+        {
+            get
+            {
+                return _experiencePoints;
+            }
+            private set
+            {
+                _experiencePoints = value;
+                OnPropertyChanged("ExperiencePoints");
+                OnPropertyChanged("Level");
+            }
+        }
+
         public int Level
         {
             get { return ((ExperiencePoints / 100) + 1); }
