@@ -9,8 +9,18 @@ namespace Engine
 {
     public class PlayerQuest : INotifyPropertyChanged
     {
-        public Quest Details { get; set; }
+        private Quest _details;
         public bool IsCompleted { get; set; }
+
+        public Quest Details
+        {
+            get { return _details; }
+            set
+            {
+                _details = value;
+                OnPropertyChanged("Details");
+            }
+        }
 
         public PlayerQuest(Quest details)
         {
