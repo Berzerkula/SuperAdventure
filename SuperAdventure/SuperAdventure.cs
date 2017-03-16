@@ -95,7 +95,7 @@ namespace SuperAdventure
 
         private void PlayerOnPropertyChanged(object sender, PropertyChangedEventArgs propertyChangedEventArgs)
         {
-            if (propertyChangedEventArgs.PropertyName = "Weapons")
+            if (propertyChangedEventArgs.PropertyName == "Weapons")
             {
                 cboWeapons.DataSource = _player.Weapons;
 
