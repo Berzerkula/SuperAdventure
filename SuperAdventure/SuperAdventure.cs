@@ -102,7 +102,7 @@ namespace SuperAdventure
                 if (!_player.Weapons.Any())
                 {
                     cboWeapons.Visible = false;
-                    bntUseWeapon.Visible = false;
+                    btnUseWeapon.Visible = false;
                 }
             }
 
