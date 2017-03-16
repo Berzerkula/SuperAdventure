@@ -92,6 +92,31 @@ namespace SuperAdventure
 
             MoveTo(_player.CurrentLocation);
         }
+
+        private void PlayerOnPropertyChanged(object sender, PropertyChangedEventArgs propertyChangedEventArgs)
+        {
+            if (propertyChangedEventArgs.PropertyName = "Weapons")
+            {
+                cboWeapons.DataSource = _player.Weapons;
+
+                if (!_player.Weapons.Any())
+                {
+                    cboWeapons.Visible = false;
+                    bntUseWeapon.Visible = false;
+                }
+            }
+
+            if(propertyChangedEventArgs.PropertyName == "Potions")
+            {
+                cboPotions.DataSource = _player.Potions;
+
+                if(!_player.Potions.Any())
+                {
+                    cboPotions.Visible = false;
+                    btnUsePotion.Visible = false;
+                }
+            }
+        }
         
         private void btnNorth_Click(object sender, EventArgs e)
         {
