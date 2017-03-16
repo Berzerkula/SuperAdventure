@@ -128,8 +128,36 @@ namespace SuperAdventure
                     btnUsePotion.Visible = false;
                 }
             }
+
+            if (propertyChangedEventArgs.PropertyName == "CurrentLocation")
+            {
+                // Show/hide available movement buttons
+                btnNorth.Visible = (_player.CurrentLocation.LocationToNorth != null);
+                btnEast.Visible = (_player.CurrentLocation.LocationToEast != null);
+                btnSouth.Visible = (_player.CurrentLocation.LocationToSouth != null);
+                btnWest.Visible = (_player.CurrentLocation.LocationToWest != null);
+
+                // Display current location name and description
+                rtbLocation.Text = _player.CurrentLocation.Name + Environment.NewLine;
+                rtbLocation.Text += _player.CurrentLocation.Description + Environment.NewLine;
+
+                if (_player.CurrentLocation.MonsterLivingHere == null)
+                {
+                    cboWeapons.Visible = false;
+                    cboPotions.Visible = false;
+                    btnUseWeapon.Visible = false;
+                    btnUsePotion.Visible = false;
+                }
+                else
+                {
+                    cboWeapons.Visible = _player.Weapons.Any();
+                    cboPotions.Visible = _player.Potions.Any();
+                    btnUseWeapon.Visible = _player.Weapons.Any();
+                    btnUsePotion.Visible = _player.Potions.Any();
+                }
+            }
         }
-        
+
         private void btnNorth_Click(object sender, EventArgs e)
         {
             _player.MoveNorth();
