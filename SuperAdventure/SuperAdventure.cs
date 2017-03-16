@@ -207,9 +207,6 @@ namespace SuperAdventure
                 btnUsePotion.Visible = false;
             }
 
-            // Refresh player's inventory list
-            UpdateInventoryListInUI();
-
             // Refresh player's quest list
             UpdateQuestListInUI();
 
@@ -218,26 +215,6 @@ namespace SuperAdventure
 
             // Refresh player's potions combobox
             UpdatePotionListInUI();
-        }
-
-        private void UpdateInventoryListInUI()
-        {
-            dgvInventory.RowHeadersVisible = false;
-
-            dgvInventory.ColumnCount = 2;
-            dgvInventory.Columns[0].Name = "Name";
-            dgvInventory.Columns[0].Width = 197;
-            dgvInventory.Columns[1].Name = "Quantity";
-
-            dgvInventory.Rows.Clear();
-
-            foreach (InventoryItem inventoryItem in _player.Inventory)
-            {
-                if (inventoryItem.Quantity > 0)
-                {
-                    dgvInventory.Rows.Add(new[] { inventoryItem.Details.Name, inventoryItem.Quantity.ToString() });
-                }
-            }
         }
 
         private void UpdateQuestListInUI()
@@ -396,7 +373,6 @@ namespace SuperAdventure
                     }
                 }
 
-                UpdateInventoryListInUI();
                 UpdateWeaponListInUI();
                 UpdatePotionListInUI();
 
@@ -482,7 +458,6 @@ namespace SuperAdventure
 
             // Refresh player data in UI
             lblHitPoints.Text = _player.CurrentHitPoints.ToString();
-            UpdateInventoryListInUI();
             UpdatePotionListInUI();
         }
 
