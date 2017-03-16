@@ -43,7 +43,17 @@ namespace Engine
         {
             get { return ((ExperiencePoints / 100) + 1); }
         }
-        public Location CurrentLocation { get; set; }
+
+        public Location CurrentLocation
+        {
+            get { return _currentLocation; }
+            set
+            {
+                _currentLocation = value;
+                OnPropertyChanged("CurrentLocation");
+            }
+        }
+
         public Weapon CurrentWeapon { get; set; }
         public BindingList<InventoryItem> Inventory { get; set; }
         public BindingList<PlayerQuest> Quests { get; set; }
