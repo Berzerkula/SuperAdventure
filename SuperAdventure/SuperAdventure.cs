@@ -212,9 +212,9 @@ namespace SuperAdventure
 
         private void btnTrade_Click(object sender, EventArgs e)
         {
-            TradingScreen.tradingScreen = new TradingScreen();
+            TradingScreen tradingScreen = new TradingScreen();
             tradingScreen.StartPosition = FormStartPosition.CenterParent;
-            TradingScreen.ShowDialog(this);
+            tradingScreen.ShowDialog(this);
         }
 
         private void btnClearRtbMessages_Click(object sender, EventArgs e)
