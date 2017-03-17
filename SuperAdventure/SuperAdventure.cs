@@ -211,6 +211,8 @@ namespace SuperAdventure
         private void SuperAdventure_FormClosing(object sender, FormClosingEventArgs e)
         {
             File.WriteAllText(PLAYER_DATA_FILE_NAME, _player.ToXmlString());
+
+            PlayerDataMapper.SaveToDatabase(_player);
         }
 
         private void cboWeapons_SelectedIndexChanged(object sender, EventArgs e)
