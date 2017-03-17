@@ -64,7 +64,7 @@
             this.dgvMyItems.Name = "dgvMyItems";
             this.dgvMyItems.ReadOnly = true;
             this.dgvMyItems.RowTemplate.Height = 24;
-            this.dgvMyItems.Size = new System.Drawing.Size(260, 216);
+            this.dgvMyItems.Size = new System.Drawing.Size(280, 216);
             this.dgvMyItems.TabIndex = 2;
             // 
             // dgvVendorItems
@@ -72,16 +72,16 @@
             this.dgvVendorItems.AllowUserToAddRows = false;
             this.dgvVendorItems.AllowUserToDeleteRows = false;
             this.dgvVendorItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVendorItems.Location = new System.Drawing.Point(296, 43);
+            this.dgvVendorItems.Location = new System.Drawing.Point(306, 43);
             this.dgvVendorItems.Name = "dgvVendorItems";
             this.dgvVendorItems.ReadOnly = true;
             this.dgvVendorItems.RowTemplate.Height = 24;
-            this.dgvVendorItems.Size = new System.Drawing.Size(260, 216);
+            this.dgvVendorItems.Size = new System.Drawing.Size(270, 216);
             this.dgvVendorItems.TabIndex = 3;
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(481, 274);
+            this.btnClose.Location = new System.Drawing.Point(501, 274);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 4;
@@ -94,7 +94,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(566, 302);
+            this.ClientSize = new System.Drawing.Size(586, 302);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dgvVendorItems);
             this.Controls.Add(this.dgvMyItems);
