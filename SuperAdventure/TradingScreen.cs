@@ -148,7 +148,31 @@ namespace SuperAdventure
 
         private void dgvVendorItems_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            // The 4th column (ColumnIndex = 3) has the "Buy 1" button.
+            if (e.ColumnIndex == 3)
+            {
+                // This gets the ID value of the item, from the hidden 1st column
+                var itemID = dgvVendorItems.Rows[e.RowIndex].Cells[0].Value;
+
+                // Get the Item object for the selected item row
+                Item itemBeingBought = World.ItemByID(Convert.ToInt32(itemID));
+
+                // Check if the player has enough gold to buy the item
+                if (_currentPlayer.Gold >= itemBeingBought.Price)
+                {
+                    // Add one of the items to the player's inventory
+                    _currentPlayer.AddItemToInventory(itemBeingBought);
+
+                    // Remove the gold to pay for the item
+                    _currentPlayer.Gold -= itemBeingBought.Price;
+                }
+                else
+                {
+                    MessageBox.Show("You do not have enough gold to buy the " + itemBeingBought.Name);
+                }
+            }
         }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
