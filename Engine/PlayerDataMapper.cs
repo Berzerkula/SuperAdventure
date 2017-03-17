@@ -6,7 +6,7 @@ namespace Engine
 {
     public static class PlayerDataMapper
     {
-        private static readonly string _connectionString = "Data Source=(local);Initial Catalog=SuperAdventure;Integrated Security=True";
+        private static readonly string _connectionString = "Data Source=(local);Initial Catalog=SuperAdventure;Integrated Security=True;Connection Timeout=1";
 
         public static Player CreateFromDatabase()
         {
