@@ -137,6 +137,9 @@ namespace SuperAdventure
                 btnSouth.Visible = (_player.CurrentLocation.LocationToSouth != null);
                 btnWest.Visible = (_player.CurrentLocation.LocationToWest != null);
 
+                // Show/hide trade button
+                btnTrade.Visible = (_player.CurrentLocation.VendorWorkingHere != null);
+
                 // Display current location name and description
                 rtbLocation.Text = _player.CurrentLocation.Name + Environment.NewLine;
                 rtbLocation.Text += _player.CurrentLocation.Description + Environment.NewLine;
