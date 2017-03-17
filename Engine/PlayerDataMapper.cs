@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 
 namespace Engine
 {
-    class PlayerDataMapper
+    public static class PlayerDataMapper
     {
     }
 }
