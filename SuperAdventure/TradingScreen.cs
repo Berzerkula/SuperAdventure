@@ -116,6 +116,34 @@ namespace SuperAdventure
 
         private void dgvMyItems_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            // The first column of a datagridview has a ColumnIndex = 0
+            // This is known as a "zero-based" array/collection/list.
+            // You start counting with 0.
+            //
+            // The 5th column (ColumnIndex = 4) is the column with the button.
+            // So, if the player clicked the button column, we will sell an item from that row.
+            if (e.ColumnIndex == 4)
+            {
+                // This gets the ID value of the item, from the hidden 1st column
+                // Remember, ColumnIndex = 0, for the first column
+                var itemID = dgvMyItems.Rows[e.RowIndex].Cells[0].Value;
+
+                // Get the Item object for the selected item row
+                Item itemBeingSold = World.ItemByID(Convert.ToInt32(itemID));
+
+                if (itemBeingSold.Price == World.UNSELLABLE_ITEM_PRICE)
+                {
+                    MessageBox.Show("You cannot sell the " + itemBeingSold.Name);
+                }
+                else
+                {
+                    // Remove one of these items from the player's inventory
+                    _currentPlayer.RemoveItemFromInventory(itemBeingSold);
+
+                    // Give the player the gold for the item being sold.
+                    _currentPlayer.Gold += itemBeingSold.Price;
+                }
+            }
         }
 
         private void dgvVendorItems_CellClick(object sender, DataGridViewCellEventArgs e)
