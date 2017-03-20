@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SuperAdventure));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -210,6 +211,7 @@
             // 
             // rtbLocation
             // 
+            this.rtbLocation.BackColor = System.Drawing.SystemColors.Control;
             this.rtbLocation.Location = new System.Drawing.Point(347, 19);
             this.rtbLocation.Name = "rtbLocation";
             this.rtbLocation.ReadOnly = true;
@@ -260,16 +262,6 @@
             this.dgvQuests.RowHeadersVisible = false;
             this.dgvQuests.Size = new System.Drawing.Size(312, 189);
             this.dgvQuests.TabIndex = 20;
-            //
-            // btnTrade
-            //
-            this.btnTrade.Location = new System.Drawing.Point(493, 620);
-            this.btnTrade.Name = "btnTrade";
-            this.btnTrade.Size = new System.Drawing.Size(75, 23);
-            this.btnTrade.TabIndex = 21;
-            this.btnTrade.Text = "Trade";
-            this.btnTrade.UseVisualStyleBackColor = true;
-            this.btnTrade.Click += new System.EventHandler(this.btnTrade_Click);
             // 
             // btnClearRtbMessages
             // 
@@ -281,10 +273,22 @@
             this.btnClearRtbMessages.UseVisualStyleBackColor = true;
             this.btnClearRtbMessages.Click += new System.EventHandler(this.btnClearRtbMessages_Click);
             // 
+            // btnTrade
+            // 
+            this.btnTrade.Location = new System.Drawing.Point(493, 620);
+            this.btnTrade.Name = "btnTrade";
+            this.btnTrade.Size = new System.Drawing.Size(75, 23);
+            this.btnTrade.TabIndex = 21;
+            this.btnTrade.Text = "Trade";
+            this.btnTrade.UseVisualStyleBackColor = true;
+            this.btnTrade.Click += new System.EventHandler(this.btnTrade_Click);
+            // 
             // SuperAdventure
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(727, 663);
             this.Controls.Add(this.dgvQuests);
             this.Controls.Add(this.dgvInventory);
