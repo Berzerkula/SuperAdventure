@@ -59,98 +59,110 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(18, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(82, 11);
             this.label1.TabIndex = 0;
             this.label1.Text = "Hit Points:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(18, 46);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.Size = new System.Drawing.Size(40, 11);
             this.label2.TabIndex = 1;
             this.label2.Text = "Gold:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(18, 74);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
+            this.label3.Size = new System.Drawing.Size(82, 11);
             this.label3.TabIndex = 2;
             this.label3.Text = "Experience:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(18, 100);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 13);
+            this.label4.Size = new System.Drawing.Size(47, 11);
             this.label4.TabIndex = 3;
             this.label4.Text = "Level:";
             // 
             // lblHitPoints
             // 
             this.lblHitPoints.AutoSize = true;
+            this.lblHitPoints.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHitPoints.Location = new System.Drawing.Point(110, 19);
             this.lblHitPoints.Name = "lblHitPoints";
-            this.lblHitPoints.Size = new System.Drawing.Size(0, 13);
+            this.lblHitPoints.Size = new System.Drawing.Size(0, 11);
             this.lblHitPoints.TabIndex = 4;
             // 
             // lblGold
             // 
             this.lblGold.AutoSize = true;
+            this.lblGold.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGold.Location = new System.Drawing.Point(110, 45);
             this.lblGold.Name = "lblGold";
-            this.lblGold.Size = new System.Drawing.Size(0, 13);
+            this.lblGold.Size = new System.Drawing.Size(0, 11);
             this.lblGold.TabIndex = 5;
             // 
             // lblExperience
             // 
             this.lblExperience.AutoSize = true;
+            this.lblExperience.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExperience.Location = new System.Drawing.Point(110, 73);
             this.lblExperience.Name = "lblExperience";
-            this.lblExperience.Size = new System.Drawing.Size(0, 13);
+            this.lblExperience.Size = new System.Drawing.Size(0, 11);
             this.lblExperience.TabIndex = 6;
             // 
             // lblLevel
             // 
             this.lblLevel.AutoSize = true;
+            this.lblLevel.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLevel.Location = new System.Drawing.Point(110, 99);
             this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(0, 13);
+            this.lblLevel.Size = new System.Drawing.Size(0, 11);
             this.lblLevel.TabIndex = 7;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(614, 552);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 13);
+            this.label5.Size = new System.Drawing.Size(96, 11);
             this.label5.TabIndex = 8;
             this.label5.Text = "Select action";
             // 
             // cboWeapons
             // 
+            this.cboWeapons.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboWeapons.FormattingEnabled = true;
             this.cboWeapons.Location = new System.Drawing.Point(366, 580);
             this.cboWeapons.Name = "cboWeapons";
-            this.cboWeapons.Size = new System.Drawing.Size(121, 21);
+            this.cboWeapons.Size = new System.Drawing.Size(121, 19);
             this.cboWeapons.TabIndex = 9;
             // 
             // cboPotions
             // 
+            this.cboPotions.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPotions.FormattingEnabled = true;
             this.cboPotions.Location = new System.Drawing.Point(366, 614);
             this.cboPotions.Name = "cboPotions";
-            this.cboPotions.Size = new System.Drawing.Size(121, 21);
+            this.cboPotions.Size = new System.Drawing.Size(121, 19);
             this.cboPotions.TabIndex = 10;
             // 
             // btnUseWeapon
             // 
+            this.btnUseWeapon.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUseWeapon.Location = new System.Drawing.Point(617, 580);
             this.btnUseWeapon.Name = "btnUseWeapon";
             this.btnUseWeapon.Size = new System.Drawing.Size(75, 23);
@@ -161,6 +173,7 @@
             // 
             // btnUsePotion
             // 
+            this.btnUsePotion.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsePotion.Location = new System.Drawing.Point(617, 614);
             this.btnUsePotion.Name = "btnUsePotion";
             this.btnUsePotion.Size = new System.Drawing.Size(75, 23);
@@ -171,6 +184,7 @@
             // 
             // btnNorth
             // 
+            this.btnNorth.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNorth.Location = new System.Drawing.Point(493, 467);
             this.btnNorth.Name = "btnNorth";
             this.btnNorth.Size = new System.Drawing.Size(75, 23);
@@ -181,6 +195,7 @@
             // 
             // btnEast
             // 
+            this.btnEast.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEast.Location = new System.Drawing.Point(573, 497);
             this.btnEast.Name = "btnEast";
             this.btnEast.Size = new System.Drawing.Size(75, 23);
@@ -191,6 +206,7 @@
             // 
             // btnSouth
             // 
+            this.btnSouth.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSouth.Location = new System.Drawing.Point(493, 527);
             this.btnSouth.Name = "btnSouth";
             this.btnSouth.Size = new System.Drawing.Size(75, 23);
@@ -201,6 +217,7 @@
             // 
             // btnWest
             // 
+            this.btnWest.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnWest.Location = new System.Drawing.Point(412, 497);
             this.btnWest.Name = "btnWest";
             this.btnWest.Size = new System.Drawing.Size(75, 23);
@@ -212,6 +229,7 @@
             // rtbLocation
             // 
             this.rtbLocation.BackColor = System.Drawing.SystemColors.Control;
+            this.rtbLocation.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbLocation.Location = new System.Drawing.Point(347, 19);
             this.rtbLocation.Name = "rtbLocation";
             this.rtbLocation.ReadOnly = true;
@@ -221,6 +239,7 @@
             // 
             // rtbMessages
             // 
+            this.rtbMessages.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbMessages.Location = new System.Drawing.Point(347, 130);
             this.rtbMessages.Name = "rtbMessages";
             this.rtbMessages.ReadOnly = true;
@@ -265,6 +284,7 @@
             // 
             // btnClearRtbMessages
             // 
+            this.btnClearRtbMessages.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearRtbMessages.Location = new System.Drawing.Point(632, 427);
             this.btnClearRtbMessages.Name = "btnClearRtbMessages";
             this.btnClearRtbMessages.Size = new System.Drawing.Size(75, 23);
@@ -275,6 +295,7 @@
             // 
             // btnTrade
             // 
+            this.btnTrade.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrade.Location = new System.Drawing.Point(493, 620);
             this.btnTrade.Name = "btnTrade";
             this.btnTrade.Size = new System.Drawing.Size(75, 23);
