@@ -85,31 +85,11 @@ namespace SuperAdventureConsole
         {
             if (input.Contains("help") || input == "?")
             {
-                Console.WriteLine("Available commands");
-                Console.WriteLine("====================================");
-                Console.WriteLine("Stats - Display player information");
-                Console.WriteLine("Look - Get the description of your location");
-                Console.WriteLine("Inventory - Display your inventory");
-                Console.WriteLine("Quests - Display your quests");
-                Console.WriteLine("Attack - Fight the monster");
-                Console.WriteLine("Equip <weapon name> - Set your current weapon");
-                Console.WriteLine("Drink <potion name> - Drink a potion");
-                Console.WriteLine("Trade - display your inventory and vendor's inventory");
-                Console.WriteLine("Buy <item name> - Buy an item from a vendor");
-                Console.WriteLine("Sell <item name> - Sell an item to a vendor");
-                Console.WriteLine("North - Move North");
-                Console.WriteLine("South - Move South");
-                Console.WriteLine("East - Move East");
-                Console.WriteLine("West - Move West");
-                Console.WriteLine("Exit - Save the game and exit");
+                DisplayHelpText();
             }
             else if (input == "stats")
             {
-                Console.WriteLine("Current hit points: {0}", _player.CurrentHitPoints);
-                Console.WriteLine("Maximum hit points: {0}", _player.MaximumHitPoints);
-                Console.WriteLine("Experience Points: {0}", _player.ExperiencePoints);
-                Console.WriteLine("Level: {0}", _player.Level);
-                Console.WriteLine("Gold: {0}", _player.Gold);
+                DisplayPlayerStats();
             }
             else if (input == "look")
             {
@@ -390,6 +370,36 @@ namespace SuperAdventureConsole
 
             // Write a blank line, to keep the UI a little cleaner
             Console.WriteLine("");
+        }
+
+        private static void DisplayHelpText()
+        {
+            Console.WriteLine("Available commands");
+            Console.WriteLine("====================================");
+            Console.WriteLine("Stats - Display player information");
+            Console.WriteLine("Look - Get the description of your location");
+            Console.WriteLine("Inventory - Display your inventory");
+            Console.WriteLine("Quests - Display your quests");
+            Console.WriteLine("Attack - Fight the monster");
+            Console.WriteLine("Equip <weapon name> - Set your current weapon");
+            Console.WriteLine("Drink <potion name> - Drink a potion");
+            Console.WriteLine("Trade - display your inventory and vendor's inventory");
+            Console.WriteLine("Buy <item name> - Buy an item from a vendor");
+            Console.WriteLine("Sell <item name> - Sell an item to a vendor");
+            Console.WriteLine("North - Move North");
+            Console.WriteLine("South - Move South");
+            Console.WriteLine("East - Move East");
+            Console.WriteLine("West - Move West");
+            Console.WriteLine("Exit - Save the game and exit");
+        }
+
+        private static void DisplayPlayerStats()
+        {
+            Console.WriteLine("Current hit points: {0}", _player.CurrentHitPoints);
+            Console.WriteLine("Maximum hit points: {0}", _player.MaximumHitPoints);
+            Console.WriteLine("Experience Points: {0}", _player.ExperiencePoints);
+            Console.WriteLine("Level: {0}", _player.Level);
+            Console.WriteLine("Gold: {0}", _player.Gold);
         }
 
         private static void DisplayCurrentLocation()
