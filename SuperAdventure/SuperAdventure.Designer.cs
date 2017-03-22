@@ -63,7 +63,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Tomato;
             this.label1.Location = new System.Drawing.Point(18, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 11);
@@ -73,7 +75,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gold;
             this.label2.Location = new System.Drawing.Point(18, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 11);
@@ -83,7 +87,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.PowderBlue;
             this.label3.Location = new System.Drawing.Point(18, 74);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 11);
@@ -93,7 +99,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.LavenderBlush;
             this.label4.Location = new System.Drawing.Point(18, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 11);
@@ -103,7 +111,9 @@
             // lblHitPoints
             // 
             this.lblHitPoints.AutoSize = true;
+            this.lblHitPoints.BackColor = System.Drawing.Color.Transparent;
             this.lblHitPoints.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHitPoints.ForeColor = System.Drawing.Color.Tomato;
             this.lblHitPoints.Location = new System.Drawing.Point(110, 19);
             this.lblHitPoints.Name = "lblHitPoints";
             this.lblHitPoints.Size = new System.Drawing.Size(0, 11);
@@ -112,7 +122,9 @@
             // lblGold
             // 
             this.lblGold.AutoSize = true;
+            this.lblGold.BackColor = System.Drawing.Color.Transparent;
             this.lblGold.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGold.ForeColor = System.Drawing.Color.Gold;
             this.lblGold.Location = new System.Drawing.Point(110, 45);
             this.lblGold.Name = "lblGold";
             this.lblGold.Size = new System.Drawing.Size(0, 11);
@@ -121,7 +133,9 @@
             // lblExperience
             // 
             this.lblExperience.AutoSize = true;
+            this.lblExperience.BackColor = System.Drawing.Color.Transparent;
             this.lblExperience.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExperience.ForeColor = System.Drawing.Color.PowderBlue;
             this.lblExperience.Location = new System.Drawing.Point(110, 73);
             this.lblExperience.Name = "lblExperience";
             this.lblExperience.Size = new System.Drawing.Size(0, 11);
@@ -130,7 +144,9 @@
             // lblLevel
             // 
             this.lblLevel.AutoSize = true;
+            this.lblLevel.BackColor = System.Drawing.Color.Transparent;
             this.lblLevel.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLevel.ForeColor = System.Drawing.Color.LavenderBlush;
             this.lblLevel.Location = new System.Drawing.Point(110, 99);
             this.lblLevel.Name = "lblLevel";
             this.lblLevel.Size = new System.Drawing.Size(0, 11);
@@ -345,7 +361,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(727, 663);
             this.Controls.Add(this.dgvQuests);
             this.Controls.Add(this.dgvInventory);
