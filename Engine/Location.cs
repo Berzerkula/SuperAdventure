@@ -27,5 +27,10 @@
             QuestAvailableHere = questAvailableHere;
             MonsterLivingHere = monsterLivingHere;
         }
+
+        public Monster NewInstanceOfMonsterLivingHere()
+        {
+            return MonsterLivingHere == null ? null : MonsterLivingHere.NewInstanceOfMonster();
+        }
     }
 }
