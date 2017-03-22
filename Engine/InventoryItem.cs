@@ -28,26 +28,25 @@ namespace Engine
             }
         }
 
-        public string Description
-        {
-            get { return Quantity > 1 ? Details.NamePlural : Details.Name; }
-        }
-
-
-        public InventoryItem(Item details, int quantity)
-        {
-            Details = details;
-            Quantity = quantity;
-        }
-
         public int ItemID
         {
             get { return Details.ID; }
         }
 
+        public string Description
+        {
+            get { return Quantity > 1 ? Details.NamePlural : Details.Name; }
+        }
+
         public int Price
         {
             get { return Details.Price; }
+        }
+
+        public InventoryItem(Item details, int quantity)
+        {
+            Details = details;
+            Quantity = quantity;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
