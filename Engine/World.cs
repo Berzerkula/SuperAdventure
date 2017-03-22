@@ -12,6 +12,7 @@ namespace Engine
 
         public const int UNSELLABLE_ITEM_PRICE = -1;
 
+        // Items (Weapons, Rewards, Lootables)
         public const int ITEM_ID_RUSTY_SWORD = 1;
         public const int ITEM_ID_RAT_TAIL = 2;
         public const int ITEM_ID_PIECE_OF_FUR = 3;
@@ -23,13 +24,16 @@ namespace Engine
         public const int ITEM_ID_SPIDER_SILK = 9;
         public const int ITEM_ID_ADVENTURER_PASS = 10;
 
+        // Monsters
         public const int MONSTER_ID_RAT = 1;
         public const int MONSTER_ID_SNAKE = 2;
         public const int MONSTER_ID_GIANT_SPIDER = 3;
 
+        // Quests
         public const int QUEST_ID_CLEAR_ALCHEMIST_GARDEN = 1;
         public const int QUEST_ID_CLEAR_FARMERS_FIELD = 2;
 
+        // Locations
         public const int LOCATION_ID_HOME = 1;
         public const int LOCATION_ID_TOWN_SQUARE = 2;
         public const int LOCATION_ID_GUARD_POST = 3;
