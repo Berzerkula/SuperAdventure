@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Engine
 {
@@ -177,54 +178,22 @@ namespace Engine
 
         public static Item ItemByID(int id)
         {
-            foreach (Item item in _items)
-            {
-                if (item.ID == id)
-                {
-                    return item;
-                }
-            }
-
-            return null;
+            return _items.SingleOrDefault(x => x.ID == id);
         }
 
         public static Monster MonsterByID(int id)
         {
-            foreach (Monster monster in _monsters)
-            {
-                if (monster.ID == id)
-                {
-                    return monster;
-                }
-            }
-
-            return null;
+            return _monsters.SingleOrDefault(x => x.ID == id);
         }
 
         public static Quest QuestByID(int id)
         {
-            foreach (Quest quest in _quests)
-            {
-                if (quest.ID == id)
-                {
-                    return quest;
-                }
-            }
-
-            return null;
+            return _quests.SingleOrDefault(x => x.ID == id);
         }
 
         public static Location LocationByID(int id)
         {
-            foreach (Location location in _locations)
-            {
-                if (location.ID == id)
-                {
-                    return location;
-                }
-            }
-
-            return null;
+            return _locations.SingleOrDefault(x => x.ID == id);
         }
     }
 }
