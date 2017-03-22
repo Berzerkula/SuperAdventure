@@ -378,7 +378,7 @@ namespace Engine
         private void SetTheCurrentMonsterForTheCurrentLocation(Location location)
         {
             // Populate the current monster with this location's monster (or null, if there is no monster here)
-            // CurrentMonster = location.NewInstanceOfMonsterLivingHere();
+            CurrentMonster = location.NewInstanceOfMonsterLivingHere();
 
             if (CurrentMonster != null)
             {
