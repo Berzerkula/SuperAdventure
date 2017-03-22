@@ -198,6 +198,7 @@ namespace SuperAdventure
             _player.UsePotion(potion);
         }
 
+        // On text change of Messages box, show new message and scroll to bottom.
         private void rtbMessages_TextChanged(object sender, EventArgs e)
         {
             rtbMessages.SelectionStart = rtbMessages.Text.Length;
