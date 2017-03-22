@@ -120,6 +120,7 @@ namespace Engine
             Vendor hobbitWares = new Engine.Vendor("Hobbit Wares");
             hobbitWares.AddItemToInventory(ItemByID(ITEM_ID_PIECE_OF_FUR), 5);
             hobbitWares.AddItemToInventory(ItemByID(ITEM_ID_RAT_TAIL), 3);
+            hobbitWares.AddItemToInventory(ItemByID(ITEM_ID_CLUB), 1);
 
             townSquare.VendorWorkingHere = hobbitWares;
 
