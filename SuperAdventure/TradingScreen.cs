@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-
 using Engine;
 
 namespace SuperAdventure
@@ -12,6 +11,7 @@ namespace SuperAdventure
         public TradingScreen(Player player)
         {
             _currentPlayer = player;
+
             InitializeComponent();
 
             // Style, to display numeric column values
