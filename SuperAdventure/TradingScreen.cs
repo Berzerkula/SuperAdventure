@@ -140,6 +140,8 @@ namespace SuperAdventure
                 {
                     // Remove one of these items from the player's inventory
                     _currentPlayer.RemoveItemFromInventory(itemBeingSold);
+                    _currentPlayer.CurrentLocation.VendorWorkingHere.AddItemToInventory(itemBeingSold);
+
 
                     // Give the player the gold for the item being sold.
                     _currentPlayer.Gold += itemBeingSold.Price;
@@ -158,11 +160,17 @@ namespace SuperAdventure
                 // Get the Item object for the selected item row
                 Item itemBeingBought = World.ItemByID(Convert.ToInt32(itemID));
 
+                // Check if item is one that the player can only have one
+                if (itemBeingBought.CanOnlyHaveOne)
+                {
+                    MessageBox.Show("You can only have one " + itemBeingBought.Name);
+                }
                 // Check if the player has enough gold to buy the item
-                if (_currentPlayer.Gold >= itemBeingBought.Price)
+                else if (_currentPlayer.Gold >= itemBeingBought.Price)
                 {
                     // Add one of the items to the player's inventory
                     _currentPlayer.AddItemToInventory(itemBeingBought);
+                    _currentPlayer.CurrentLocation.VendorWorkingHere.RemoveItemFromInventory(itemBeingBought);
 
                     // Remove the gold to pay for the item
                     _currentPlayer.Gold -= itemBeingBought.Price;
