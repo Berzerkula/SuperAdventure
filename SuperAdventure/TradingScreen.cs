@@ -152,7 +152,7 @@ namespace SuperAdventure
                 Item itemBeingBought = World.ItemByID(Convert.ToInt32(itemID));
 
                 // Check if the player has enough gold to buy the item
-                if (_currentPlayer.Gold >= itemBeingBought.Price && itemBeingBought.CanOnlyHaveOne == false)
+                if (_currentPlayer.Gold >= itemBeingBought.Price)
                 {
                     // Add one of the items to the player's inventory
                     _currentPlayer.AddItemToInventory(itemBeingBought);
