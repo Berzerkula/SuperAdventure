@@ -5,12 +5,24 @@ namespace Engine
 {
     public class Vendor : INotifyPropertyChanged
     {
+        private int _gold;
         public string Name { get; set; }
         public BindingList<InventoryItem> Inventory { get; set; }
 
-        public Vendor(string name)
+        public int Gold
+        {
+            get { return _gold; }
+            set
+            {
+                _gold = value;
+                OnPropertyChanged("VendorGold");
+            }
+        }
+
+        public Vendor(string name, int gold)
         {
             Name = name;
+            Gold = gold;
             Inventory = new BindingList<InventoryItem>();
         }
 

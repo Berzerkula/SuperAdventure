@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using Engine;
 
@@ -136,15 +137,21 @@ namespace SuperAdventure
                 {
                     MessageBox.Show("You cannot sell the " + itemBeingSold.Name);
                 }
-                else
+                // Check if Vendor has enough gold when buying a player's item
+                else if (_currentPlayer.CurrentLocation.VendorWorkingHere.Gold >= itemBeingSold.Price)
                 {
-                    // Remove one of these items from the player's inventory
+                    // Remove one of these items from the player's inventory and add to Vendor's inventory
                     _currentPlayer.RemoveItemFromInventory(itemBeingSold);
                     _currentPlayer.CurrentLocation.VendorWorkingHere.AddItemToInventory(itemBeingSold);
 
 
-                    // Give the player the gold for the item being sold.
+                    // Give the player the gold for the item being sold and remove gold from vendor
                     _currentPlayer.Gold += itemBeingSold.Price;
+                    _currentPlayer.CurrentLocation.VendorWorkingHere.Gold -= itemBeingSold.Price;
+                }
+                else
+                {
+                    MessageBox.Show("Vendor does not have enough gold to buy" + itemBeingSold.Name);
                 }
             }
         }
@@ -160,20 +167,21 @@ namespace SuperAdventure
                 // Get the Item object for the selected item row
                 Item itemBeingBought = World.ItemByID(Convert.ToInt32(itemID));
 
-                // Check if item is one that the player can only have one
-                if (itemBeingBought.CanOnlyHaveOne)
+                // Check if item is one that the player can only have one and if it is in the player inventory
+                if ((itemBeingBought.CanOnlyHaveOne) && (_currentPlayer.Inventory.SingleOrDefault(ii => ii.Details.ID == itemBeingBought.ID)) != null)
                 {
                     MessageBox.Show("You can only have one " + itemBeingBought.Name);
                 }
                 // Check if the player has enough gold to buy the item
                 else if (_currentPlayer.Gold >= itemBeingBought.Price)
                 {
-                    // Add one of the items to the player's inventory
+                    // Add one of the items to the player's inventory and remove from vendor's inventory
                     _currentPlayer.AddItemToInventory(itemBeingBought);
                     _currentPlayer.CurrentLocation.VendorWorkingHere.RemoveItemFromInventory(itemBeingBought);
 
-                    // Remove the gold to pay for the item
+                    // Remove the gold to pay for the item and add to vendor's gold
                     _currentPlayer.Gold -= itemBeingBought.Price;
+                    _currentPlayer.CurrentLocation.VendorWorkingHere.Gold += itemBeingBought.Price;
                 }
                 else
                 {
