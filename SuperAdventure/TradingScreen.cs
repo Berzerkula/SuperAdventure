@@ -125,7 +125,14 @@ namespace SuperAdventure
                 // Get the Item object for the selected item row
                 Item itemBeingSold = World.ItemByID(Convert.ToInt32(itemID));
 
-                if (itemBeingSold.Price == World.UNSELLABLE_ITEM_PRICE)
+                // Check if the vendor wants an item in player's inventory
+                if (!itemBeingSold.VendorWants)
+                {
+                    MessageBox.Show("Vendor doesn't want " + itemBeingSold.Name);
+                }
+                // May not need this anymore since vendors don't want weapons
+                // Check if item is unsellable
+                else if (itemBeingSold.Price == World.UNSELLABLE_ITEM_PRICE)
                 {
                     MessageBox.Show("You cannot sell the " + itemBeingSold.Name);
                 }
