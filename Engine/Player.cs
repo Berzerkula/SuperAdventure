@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Windows.Forms;
 using System.Xml;
 
 namespace Engine
@@ -279,11 +278,7 @@ namespace Engine
         {
             InventoryItem existingItemInInventory = Inventory.SingleOrDefault(ii => ii.Details.ID == itemToAdd.ID);
 
-            if ((existingItemInInventory != null) && (itemToAdd.CanOnlyHaveOne))
-            {
-                MessageBox.Show("You can only have one " + itemToAdd.Name);
-            }
-            else if (existingItemInInventory == null)
+            if (existingItemInInventory == null)
             {
                 Inventory.Add(new InventoryItem(itemToAdd, quantity));
             }
