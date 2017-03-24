@@ -15,7 +15,7 @@ namespace SuperAdventure
 
             InitializeComponent();
 
-            lblVendorGold.Text = _currentPlayer.CurrentLocation.VendorWorkingHere.VendorGold.ToString();
+            lblVendorGold.DataBindings.Add("Text", _currentPlayer.CurrentLocation.VendorWorkingHere, "VendorGold");
 
             // Style, to display numeric column values
             DataGridViewCellStyle rightAlignedCellStyle = new DataGridViewCellStyle();
