@@ -9,7 +9,7 @@ namespace Engine
         public string Name { get; set; }
         public BindingList<InventoryItem> Inventory { get; set; }
 
-        public int Gold
+        public int VendorGold
         {
             get { return _gold; }
             set
@@ -22,7 +22,7 @@ namespace Engine
         public Vendor(string name, int gold)
         {
             Name = name;
-            Gold = gold;
+            VendorGold = gold;
             Inventory = new BindingList<InventoryItem>();
         }
 
@@ -42,6 +42,7 @@ namespace Engine
             }
 
             OnPropertyChanged("Inventory");
+            OnPropertyChanged("VendorGold");
         }
 
         public void RemoveItemFromInventory(Item itemToRemove, int quantity = 1)
@@ -73,6 +74,7 @@ namespace Engine
 
                 // Notify the UI that the inventory has changed
                 OnPropertyChanged("Inventory");
+                OnPropertyChanged("VendorGold");
             }
         }
 
