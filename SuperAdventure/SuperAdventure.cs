@@ -20,7 +20,7 @@ namespace SuperAdventure
 
             _player = PlayerDataMapper.CreateFromDatabase();
 
-            if(_player == null)
+            if (_player == null)
             {
                 if (File.Exists(PLAYER_DATA_FILE_NAME))
                 {
@@ -119,11 +119,11 @@ namespace SuperAdventure
                 }
             }
 
-            if(propertyChangedEventArgs.PropertyName == "Potions")
+            if (propertyChangedEventArgs.PropertyName == "Potions")
             {
                 cboPotions.DataSource = _player.Potions;
 
-                if(!_player.Potions.Any())
+                if (!_player.Potions.Any())
                 {
                     cboPotions.Visible = false;
                     btnUsePotion.Visible = false;

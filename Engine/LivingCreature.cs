@@ -30,7 +30,7 @@ namespace Engine
 
         protected void OnPropertyChanged(string name)
         {
-            if(PropertyChanged != null)
+            if (PropertyChanged != null)
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(name));
             }

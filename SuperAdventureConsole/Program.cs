@@ -37,7 +37,7 @@ namespace SuperAdventureConsole
                 string userInput = Console.ReadLine();
 
                 // If they typed a blank line, loop back and wait for input again
-                if(userInput == null)
+                if (userInput == null)
                 {
                     continue;
                 }
