@@ -161,7 +161,7 @@ namespace SuperAdventure
                 }
                 else
                 {
-                    MessageBox.Show("Vendor does not have enough gold to buy" + itemBeingSold.Name);
+                    MessageBox.Show("Vendor does not have enough gold to buy " + itemBeingSold.Name);
                 }
             }
         }
