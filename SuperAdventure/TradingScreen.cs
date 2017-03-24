@@ -15,6 +15,8 @@ namespace SuperAdventure
 
             InitializeComponent();
 
+            lblVendorGold.Text = _currentPlayer.CurrentLocation.VendorWorkingHere.VendorGold.ToString();
+
             // Style, to display numeric column values
             DataGridViewCellStyle rightAlignedCellStyle = new DataGridViewCellStyle();
             rightAlignedCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
@@ -88,6 +90,14 @@ namespace SuperAdventure
 
             dgvVendorItems.Columns.Add(new DataGridViewTextBoxColumn
             {
+                HeaderText = "Qty",
+                Width = 30,
+                DefaultCellStyle = rightAlignedCellStyle,
+                DataPropertyName = "Quantity"
+            });
+
+            dgvVendorItems.Columns.Add(new DataGridViewTextBoxColumn
+            {
                 HeaderText = "Price",
                 Width = 35,
                 DefaultCellStyle = rightAlignedCellStyle,
@@ -138,7 +148,7 @@ namespace SuperAdventure
                     MessageBox.Show("You cannot sell the " + itemBeingSold.Name);
                 }
                 // Check if Vendor has enough gold when buying a player's item
-                else if (_currentPlayer.CurrentLocation.VendorWorkingHere.Gold >= itemBeingSold.Price)
+                else if (_currentPlayer.CurrentLocation.VendorWorkingHere.VendorGold >= itemBeingSold.Price)
                 {
                     // Remove one of these items from the player's inventory and add to Vendor's inventory
                     _currentPlayer.RemoveItemFromInventory(itemBeingSold);
@@ -147,7 +157,7 @@ namespace SuperAdventure
 
                     // Give the player the gold for the item being sold and remove gold from vendor
                     _currentPlayer.Gold += itemBeingSold.Price;
-                    _currentPlayer.CurrentLocation.VendorWorkingHere.Gold -= itemBeingSold.Price;
+                    _currentPlayer.CurrentLocation.VendorWorkingHere.VendorGold -= itemBeingSold.Price;
                 }
                 else
                 {
@@ -158,8 +168,8 @@ namespace SuperAdventure
 
         private void dgvVendorItems_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // The 4th column (ColumnIndex = 3) has the "Buy 1" button.
-            if (e.ColumnIndex == 3)
+            // The 5th column (ColumnIndex = 4) has the "Buy 1" button.
+            if (e.ColumnIndex == 4)
             {
                 // This gets the ID value of the item, from the hidden 1st column
                 var itemID = dgvVendorItems.Rows[e.RowIndex].Cells[0].Value;
@@ -181,7 +191,7 @@ namespace SuperAdventure
 
                     // Remove the gold to pay for the item and add to vendor's gold
                     _currentPlayer.Gold -= itemBeingBought.Price;
-                    _currentPlayer.CurrentLocation.VendorWorkingHere.Gold += itemBeingBought.Price;
+                    _currentPlayer.CurrentLocation.VendorWorkingHere.VendorGold += itemBeingBought.Price;
                 }
                 else
                 {

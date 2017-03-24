@@ -37,6 +37,8 @@
             this.dgvMyItems = new System.Windows.Forms.DataGridView();
             this.dgvVendorItems = new System.Windows.Forms.DataGridView();
             this.btnClose = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblVendorGold = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMyItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendorItems)).BeginInit();
             this.SuspendLayout();
@@ -85,7 +87,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMyItems.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMyItems.Location = new System.Drawing.Point(10, 35);
-            this.dgvMyItems.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvMyItems.Margin = new System.Windows.Forms.Padding(2);
             this.dgvMyItems.Name = "dgvMyItems";
             this.dgvMyItems.ReadOnly = true;
             this.dgvMyItems.RowTemplate.Height = 24;
@@ -114,7 +116,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvVendorItems.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvVendorItems.Location = new System.Drawing.Point(230, 35);
-            this.dgvVendorItems.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvVendorItems.Margin = new System.Windows.Forms.Padding(2);
             this.dgvVendorItems.Name = "dgvVendorItems";
             this.dgvVendorItems.ReadOnly = true;
             this.dgvVendorItems.RowTemplate.Height = 24;
@@ -125,7 +127,7 @@
             // 
             this.btnClose.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Location = new System.Drawing.Point(376, 223);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(56, 19);
             this.btnClose.TabIndex = 4;
@@ -133,18 +135,37 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(227, 223);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Vendor Gold:";
+            // 
+            // lblVendorGold
+            // 
+            this.lblVendorGold.AutoSize = true;
+            this.lblVendorGold.Location = new System.Drawing.Point(321, 223);
+            this.lblVendorGold.Name = "lblVendorGold";
+            this.lblVendorGold.Size = new System.Drawing.Size(0, 13);
+            this.lblVendorGold.TabIndex = 6;
+            // 
             // TradingScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(440, 245);
+            this.Controls.Add(this.lblVendorGold);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dgvVendorItems);
             this.Controls.Add(this.dgvMyItems);
             this.Controls.Add(this.lblVendorInventory);
             this.Controls.Add(this.lvlMyInventory);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TradingScreen";
             this.Text = "Trade";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMyItems)).EndInit();
@@ -161,5 +182,7 @@
         private System.Windows.Forms.DataGridView dgvMyItems;
         private System.Windows.Forms.DataGridView dgvVendorItems;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblVendorGold;
     }
 }
