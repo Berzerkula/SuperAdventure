@@ -18,16 +18,18 @@ namespace Engine
         public const int ITEM_ID_PIECE_OF_FUR = 3;
         public const int ITEM_ID_SNAKE_FANG = 4;
         public const int ITEM_ID_SNAKESKIN = 5;
-        public const int ITEM_ID_CLUB = 6;
-        public const int ITEM_ID_HEALING_POTION = 7;
-        public const int ITEM_ID_SPIDER_FANG = 8;
-        public const int ITEM_ID_SPIDER_SILK = 9;
-        public const int ITEM_ID_ADVENTURER_PASS = 10;
+        public const int ITEM_ID_SNAKE_VENOM_SAC = 6;
+        public const int ITEM_ID_CLUB = 7;
+        public const int ITEM_ID_HEALING_POTION = 8;
+        public const int ITEM_ID_SPIDER_FANG = 9;
+        public const int ITEM_ID_SPIDER_SILK = 10;
+        public const int ITEM_ID_ADVENTURER_PASS = 11;
 
         // Monsters
         public const int MONSTER_ID_RAT = 1;
-        public const int MONSTER_ID_SNAKE = 2;
-        public const int MONSTER_ID_GIANT_SPIDER = 3;
+        public const int MONSTER_ID_SNAKE_COPPERHEAD = 2;
+        public const int MONSTER_ID_SNAKE_BLACK = 3;
+        public const int MONSTER_ID_GIANT_SPIDER = 4;
 
         // Quests
         public const int QUEST_ID_CLEAR_ALCHEMIST_GARDEN = 1;
@@ -59,6 +61,7 @@ namespace Engine
             _items.Add(new Item(ITEM_ID_PIECE_OF_FUR, "Piece of fur", "Pieces of fur", 1, false, true));
             _items.Add(new Item(ITEM_ID_SNAKE_FANG, "Snake fang", "Snake fangs", 1, false, true));
             _items.Add(new Item(ITEM_ID_SNAKESKIN, "Snakeskin", "Snakeskins", 2, false, true));
+            _items.Add(new Item(ITEM_ID_SNAKE_VENOM_SAC, "Venom sac", "Venom sacs", 4, false, true));
             _items.Add(new Weapon(ITEM_ID_CLUB, "Club", "Clubs", 3, 10, 8, true, false));
             _items.Add(new HealingPotion(ITEM_ID_HEALING_POTION, "Healing potion", "Healing potions", 5, 3, false, true));
             _items.Add(new Item(ITEM_ID_SPIDER_FANG, "Spider fang", "Spider fangs", 1, false, true));
@@ -72,16 +75,22 @@ namespace Engine
             rat.LootTable.Add(new LootItem(ItemByID(ITEM_ID_RAT_TAIL), 75, false));
             rat.LootTable.Add(new LootItem(ItemByID(ITEM_ID_PIECE_OF_FUR), 75, true));
 
-            Monster snake = new Monster(MONSTER_ID_SNAKE, "Snake", 5, 3, 10, 3, 3);
-            snake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SNAKE_FANG), 75, false));
-            snake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SNAKESKIN), 75, true));
+            Monster snake_black = new Monster(MONSTER_ID_SNAKE_BLACK, "Black snake", 5, 3, 10, 3, 3);
+            snake_black.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SNAKE_FANG), 75, false));
+            snake_black.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SNAKESKIN), 75, true));
+
+            Monster snake_copperhead = new Monster(MONSTER_ID_SNAKE_COPPERHEAD, "Copperhead", 9, 7, 15, 7, 7);
+            snake_copperhead.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SNAKE_FANG), 70, false));
+            snake_copperhead.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SNAKESKIN), 70, false));
+            snake_copperhead.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SNAKE_VENOM_SAC), 30, false));
 
             Monster giantSpider = new Monster(MONSTER_ID_GIANT_SPIDER, "Giant spider", 20, 5, 40, 10, 10);
             giantSpider.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SPIDER_FANG), 75, true));
             giantSpider.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SPIDER_SILK), 25, false));
 
             _monsters.Add(rat);
-            _monsters.Add(snake);
+            _monsters.Add(snake_black);
+            _monsters.Add(snake_copperhead);
             _monsters.Add(giantSpider);
         }
 
@@ -104,6 +113,7 @@ namespace Engine
                     "Kill snakes in the farmer's field and bring back 3 snake fangs. You will receive an adventurer's pass and 20 gold pieces.", 20, 20);
 
             clearFarmersField.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_SNAKE_FANG), 3));
+            clearFarmersField.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_SNAKE_VENOM_SAC), 1));
 
             clearFarmersField.RewardItem = ItemByID(ITEM_ID_ADVENTURER_PASS);
 
@@ -134,7 +144,8 @@ namespace Engine
             farmhouse.QuestAvailableHere = QuestByID(QUEST_ID_CLEAR_FARMERS_FIELD);
 
             Location farmersField = new Location(LOCATION_ID_FARM_FIELD, "Farmer's field", "You see rows of vegetables growing here.");
-            farmersField.MonsterLivingHere = MonsterByID(MONSTER_ID_SNAKE);
+            farmersField.MonsterLivingHere = MonsterByID(MONSTER_ID_SNAKE_BLACK);
+            farmersField.MonsterLivingHere = MonsterByID(MONSTER_ID_SNAKE_COPPERHEAD);
 
             Location guardPost = new Location(LOCATION_ID_GUARD_POST, "Guard post", "There is a large, tough-looking guard here.", ItemByID(ITEM_ID_ADVENTURER_PASS));
 
