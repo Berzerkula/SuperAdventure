@@ -26,8 +26,10 @@ This repository was created to improve C# programming practices and become more 
 - [X] Player turns in items and receives rewards
 - [X] Player can trade items the vendor wants
 - [X] Player can only have one weapon and healing potion in inventory
-- [X] Game saves player/vendor state to a file or database if available
+- [ ] Game saves player/vendor state to a file or database if available
+* Save vendor data
 - [ ] Game loads player/vendor state from file or database if available
+* Load vendor data
 
 ## What the interface will look like
 
