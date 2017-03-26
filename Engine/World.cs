@@ -63,7 +63,7 @@ namespace Engine
             _items.Add(new Item(ITEM_ID_SNAKESKIN, "Snakeskin", "Snakeskins", 2, false, true));
             _items.Add(new Item(ITEM_ID_SNAKE_VENOM_SAC, "Venom sac", "Venom sacs", 4, false, true));
             _items.Add(new Weapon(ITEM_ID_CLUB, "Club", "Clubs", 3, 10, 8, true, false));
-            _items.Add(new HealingPotion(ITEM_ID_HEALING_POTION, "Healing potion", "Healing potions", 5, 3, false, true));
+            _items.Add(new HealingPotion(ITEM_ID_HEALING_POTION, "Healing potion", "Healing potions", 5, 3, false, false));
             _items.Add(new Item(ITEM_ID_SPIDER_FANG, "Spider fang", "Spider fangs", 1, false, true));
             _items.Add(new Item(ITEM_ID_SPIDER_SILK, "Spider silk", "Spider silks", 1, false, true));
             _items.Add(new Item(ITEM_ID_ADVENTURER_PASS, "Adventurer pass", "Adventurer passes", UNSELLABLE_ITEM_PRICE, true, false));
