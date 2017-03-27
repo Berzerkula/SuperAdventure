@@ -10,6 +10,7 @@ namespace Engine
         public static readonly List<Quest> _quests = new List<Quest>();
         public static readonly List<Location> _locations = new List<Location>();
 
+        // May get rid of this since there is a VendorWants property
         public const int UNSELLABLE_ITEM_PRICE = -1;
 
         // Items (Weapons, Rewards, Lootables)

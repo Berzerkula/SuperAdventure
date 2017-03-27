@@ -141,7 +141,7 @@ namespace SuperAdventure
                 {
                     MessageBox.Show("Vendor doesn't want " + itemBeingSold.Name);
                 }
-                // May not need this anymore since vendors don't want weapons
+                // May get rid of this since there is a VendorWants property
                 // Check if item is unsellable
                 else if (itemBeingSold.Price == World.UNSELLABLE_ITEM_PRICE)
                 {
