@@ -20,7 +20,7 @@ namespace Engine
             set
             {
                 _gold = value;
-                OnPropertyChanged("Gold");
+                OnPropertyChanged(nameof(Gold));
             }
         }
 
@@ -30,8 +30,8 @@ namespace Engine
             private set
             {
                 _experiencePoints = value;
-                OnPropertyChanged("ExperiencePoints");
-                OnPropertyChanged("Level");
+                OnPropertyChanged(nameof(ExperiencePoints));
+                OnPropertyChanged(nameof(Level));
             }
         }
 
@@ -46,7 +46,7 @@ namespace Engine
             set
             {
                 _currentLocation = value;
-                OnPropertyChanged("CurrentLocation");
+                OnPropertyChanged(nameof(CurrentLocation));
             }
         }
 
@@ -530,12 +530,12 @@ namespace Engine
         {
             if (item is Weapon)
             {
-                OnPropertyChanged("Weapons");
+                OnPropertyChanged(nameof(Weapons));
             }
 
             if (item is HealingPotion)
             {
-                OnPropertyChanged("Potions");
+                OnPropertyChanged(nameof(Potions));
             }
         }
 

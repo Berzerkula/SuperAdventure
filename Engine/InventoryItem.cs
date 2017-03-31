@@ -13,7 +13,7 @@ namespace Engine
             set
             {
                 _details = value;
-                OnPropertyChanged("Details");
+                OnPropertyChanged(nameof(Details));
             }
         }
 
@@ -23,8 +23,8 @@ namespace Engine
             set
             {
                 _quantity = value;
-                OnPropertyChanged("Quantity");
-                OnPropertyChanged("Description");
+                OnPropertyChanged(nameof(Quantity));
+                OnPropertyChanged(nameof(Description));
             }
         }
 

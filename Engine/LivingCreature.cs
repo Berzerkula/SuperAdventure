@@ -12,7 +12,7 @@ namespace Engine
             set
             {
                 _currentHitPoints = value;
-                OnPropertyChanged("CurrentHitPoints");
+                OnPropertyChanged(nameof(CurrentHitPoints));
             }
         }
 

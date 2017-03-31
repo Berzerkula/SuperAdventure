@@ -15,7 +15,7 @@ namespace Engine
             set
             {
                 _gold = value;
-                OnPropertyChanged("VendorGold");
+                OnPropertyChanged(nameof(VendorGold));
             }
         }
 
@@ -41,8 +41,8 @@ namespace Engine
                 item.Quantity += quantity;
             }
 
-            OnPropertyChanged("Inventory");
-            OnPropertyChanged("VendorGold");
+            OnPropertyChanged(nameof(Inventory));
+            OnPropertyChanged(nameof(VendorGold));
         }
 
         public void RemoveItemFromInventory(Item itemToRemove, int quantity = 1)
@@ -73,8 +73,8 @@ namespace Engine
                 }
 
                 // Notify the UI that the inventory has changed
-                OnPropertyChanged("Inventory");
-                OnPropertyChanged("VendorGold");
+                OnPropertyChanged(nameof(Inventory));
+                OnPropertyChanged(nameof(VendorGold));
             }
         }
 
