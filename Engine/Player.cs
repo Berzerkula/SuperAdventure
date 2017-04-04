@@ -221,15 +221,19 @@ namespace Engine
             if (damage == 0)
             {
                 RaiseMessage("You missed the " + CurrentMonster.Name);
+                // Place miss attack sound
             }
             else
             {
                 CurrentMonster.CurrentHitPoints -= damage;
                 RaiseMessage("You hit the " + CurrentMonster.Name + " for " + damage + " points.");
+                // Place attack monster sound
             }
 
             if (CurrentMonster.IsDead)
             {
+                // Place monster death sound
+
                 LootTheCurrentMonster();
 
                 // "Move" to the current location, to refresh the current monster
@@ -486,12 +490,14 @@ namespace Engine
             int damageToPlayer = RandomNumberGenerator.NumberBetween(0, CurrentMonster.MaximumDamage);
 
             RaiseMessage("The " + CurrentMonster.Name + " did " + damageToPlayer + " points of damage.");
+            //Place monster attack sound here
 
             CurrentHitPoints -= damageToPlayer;
 
             if (IsDead)
             {
                 RaiseMessage("The " + CurrentMonster.Name + " killed you.");
+                //Place player death sound here
 
                 MoveHome();
             }
