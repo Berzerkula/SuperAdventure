@@ -63,7 +63,7 @@ namespace Engine
             _items.Add(new Item(ITEM_ID_SNAKE_FANG, "Snake fang", "Snake fangs", 1, false, true));
             _items.Add(new Item(ITEM_ID_SNAKESKIN, "Snakeskin", "Snakeskins", 2, false, true));
             _items.Add(new Item(ITEM_ID_SNAKE_VENOM_SAC, "Venom sac", "Venom sacs", 4, false, true));
-            _items.Add(new Weapon(ITEM_ID_CLUB, "Club", "Clubs", 3, 10, 8, true, false));
+            _items.Add(new Weapon(ITEM_ID_CLUB, "Club", "Clubs", 3, 10, 50, true, false));
             _items.Add(new HealingPotion(ITEM_ID_HEALING_POTION, "Healing potion", "Healing potions", 5, 3, false, false));
             _items.Add(new Item(ITEM_ID_SPIDER_FANG, "Spider fang", "Spider fangs", 1, false, true));
             _items.Add(new Item(ITEM_ID_SPIDER_SILK, "Spider silk", "Spider silks", 1, false, true));
@@ -132,6 +132,7 @@ namespace Engine
             hobbitWares.AddItemToInventory(ItemByID(ITEM_ID_PIECE_OF_FUR), 5);
             hobbitWares.AddItemToInventory(ItemByID(ITEM_ID_RAT_TAIL), 3);
             hobbitWares.AddItemToInventory(ItemByID(ITEM_ID_CLUB), 1);
+            hobbitWares.AddItemToInventory(ItemByID(ITEM_ID_RUSTY_SWORD), 1);
 
             townSquare.VendorWorkingHere = hobbitWares;
 
