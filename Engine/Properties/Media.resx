@@ -127,6 +127,9 @@
   <data name="MonsterPain" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MonsterPain.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="MonsterPainClub" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MonsterPainClub.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="PlayerPain" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PlayerPain.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

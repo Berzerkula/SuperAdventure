@@ -246,6 +246,7 @@ namespace Engine
             {
                 // Place MonsterPain sound
                 PlayAudio("MonsterPain");
+                PlayAudio("MonsterPainClub");
 
                 LootTheCurrentMonster();
 

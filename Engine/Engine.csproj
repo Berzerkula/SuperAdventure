@@ -69,6 +69,7 @@
     <EmbeddedResource Include="Properties\Media.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Media.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +86,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SwordHit.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MonsterPainClub.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

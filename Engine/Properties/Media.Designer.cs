@@ -90,6 +90,15 @@ namespace Engine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream MonsterPainClub {
+            get {
+                return ResourceManager.GetStream("MonsterPainClub", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream PlayerPain {
             get {
                 return ResourceManager.GetStream("PlayerPain", resourceCulture);
