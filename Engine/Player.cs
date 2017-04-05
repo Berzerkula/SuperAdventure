@@ -224,7 +224,7 @@ namespace Engine
                 RaiseMessage("You missed the " + CurrentMonster.Name);
 
                 // Place AttackMiss sound
-                PlayAudio(Properties.Media.AttackMiss);
+                PlayAudio("AttackMiss");
             }
             else
             {
@@ -234,18 +234,18 @@ namespace Engine
                 // Place SwordHit or ClubHit sound
                 if (CurrentWeapon.ID == World.ITEM_ID_RUSTY_SWORD)
                 {
-                    PlayAudio(Properties.Media.SwordHit);
+                    PlayAudio("SwordHit");
                 }
                 else if (CurrentWeapon.ID == World.ITEM_ID_CLUB)
                 {
-                    PlayAudio(Properties.Media.ClubHit);
+                    PlayAudio("ClubHit");
                 }
             }
 
             if (CurrentMonster.IsDead)
             {
                 // Place MonsterPain sound
-                PlayAudio(Properties.Media.MonsterPain);
+                PlayAudio("MonsterPain");
 
                 LootTheCurrentMonster();
 
@@ -511,7 +511,7 @@ namespace Engine
                 RaiseMessage("The " + CurrentMonster.Name + " killed you.");
 
                 // Place PlayerPain sound here
-                PlayAudio(Properties.Media.PlayerPain);
+                PlayAudio("PlayerPain");
 
                 MoveHome();
             }
@@ -567,9 +567,11 @@ namespace Engine
             }
         }
 
-        private static void PlayAudio(Stream soundToPlay)
+        private static void PlayAudio(string soundToPlay)
         {
-            SoundPlayer audio = new SoundPlayer(soundToPlay);
+            SoundPlayer audio;
+            Stream s = Engine.Properties.Media.ResourceManager.GetStream(soundToPlay);
+            audio = new SoundPlayer(s);
             audio.Play();
         }
     }
