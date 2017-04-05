@@ -221,15 +221,21 @@ namespace Engine
             if (damage == 0)
             {
                 RaiseMessage("You missed the " + CurrentMonster.Name);
+
+                // Place AttackMiss sound
             }
             else
             {
                 CurrentMonster.CurrentHitPoints -= damage;
                 RaiseMessage("You hit the " + CurrentMonster.Name + " for " + damage + " points.");
+
+                // Place SwordHit or ClubHit sound
             }
 
             if (CurrentMonster.IsDead)
             {
+                // Place MonsterPain sound
+
                 LootTheCurrentMonster();
 
                 // "Move" to the current location, to refresh the current monster
@@ -492,6 +498,8 @@ namespace Engine
             if (IsDead)
             {
                 RaiseMessage("The " + CurrentMonster.Name + " killed you.");
+
+                // Place PlayerPain sound here
 
                 MoveHome();
             }
