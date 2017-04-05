@@ -81,18 +81,18 @@ namespace Engine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream MonsterPain {
+        internal static System.IO.UnmanagedMemoryStream MonsterPainClub {
             get {
-                return ResourceManager.GetStream("MonsterPain", resourceCulture);
+                return ResourceManager.GetStream("MonsterPainClub", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream MonsterPainClub {
+        internal static System.IO.UnmanagedMemoryStream MonsterPainSword {
             get {
-                return ResourceManager.GetStream("MonsterPainClub", resourceCulture);
+                return ResourceManager.GetStream("MonsterPainSword", resourceCulture);
             }
         }
         

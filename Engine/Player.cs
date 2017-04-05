@@ -244,9 +244,15 @@ namespace Engine
 
             if (CurrentMonster.IsDead)
             {
-                // Place MonsterPain sound
-                PlayAudio("MonsterPain");
-                PlayAudio("MonsterPainClub");
+                // Place MonsterPain sound based on weapon used
+                if (CurrentWeapon.ID == World.ITEM_ID_RUSTY_SWORD)
+                {
+                    PlayAudio("MonsterPainSword");
+                }
+                else if (CurrentWeapon.ID == World.ITEM_ID_CLUB)
+                {
+                    PlayAudio("MonsterPainClub");
+                }
 
                 LootTheCurrentMonster();
 
