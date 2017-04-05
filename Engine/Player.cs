@@ -579,7 +579,7 @@ namespace Engine
             SoundPlayer audio;
             Stream s = Engine.Properties.Media.ResourceManager.GetStream(soundToPlay);
             audio = new SoundPlayer(s);
-            audio.Play();
+            audio.PlaySync();
         }
     }
 }
