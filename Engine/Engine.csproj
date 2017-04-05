@@ -47,6 +47,11 @@
     <Compile Include="LivingCreature.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="LootItem.cs" />
+    <Compile Include="Properties\Media.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Media.resx</DependentUpon>
+    </Compile>
     <Compile Include="MessageEventArgs.cs" />
     <Compile Include="Monster.cs" />
     <Compile Include="Player.cs" />
@@ -59,6 +64,27 @@
     <Compile Include="Vendor.cs" />
     <Compile Include="Weapon.cs" />
     <Compile Include="World.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Media.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Media.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttackMiss.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClubHit.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MonsterPain.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayerPain.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SwordHit.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
