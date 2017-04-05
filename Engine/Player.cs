@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Media;
 using System.Xml;
@@ -81,7 +82,6 @@ namespace Engine
         public static Player CreateDefaultPlayer()
         {
             Player player = new Player(10, 10, 20, 0);
-            player.Inventory.Add(new InventoryItem(World.ItemByID(World.ITEM_ID_RUSTY_SWORD), 1));
             player.CurrentLocation = World.LocationByID(World.LOCATION_ID_HOME);
 
             return player;
@@ -224,6 +224,7 @@ namespace Engine
                 RaiseMessage("You missed the " + CurrentMonster.Name);
 
                 // Place AttackMiss sound
+                PlayAudio(Properties.Media.AttackMiss);
             }
             else
             {
@@ -231,11 +232,20 @@ namespace Engine
                 RaiseMessage("You hit the " + CurrentMonster.Name + " for " + damage + " points.");
 
                 // Place SwordHit or ClubHit sound
+                if (CurrentWeapon.ID == World.ITEM_ID_RUSTY_SWORD)
+                {
+                    PlayAudio(Properties.Media.SwordHit);
+                }
+                else if (CurrentWeapon.ID == World.ITEM_ID_CLUB)
+                {
+                    PlayAudio(Properties.Media.ClubHit);
+                }
             }
 
             if (CurrentMonster.IsDead)
             {
                 // Place MonsterPain sound
+                PlayAudio(Properties.Media.MonsterPain);
 
                 LootTheCurrentMonster();
 
@@ -501,6 +511,7 @@ namespace Engine
                 RaiseMessage("The " + CurrentMonster.Name + " killed you.");
 
                 // Place PlayerPain sound here
+                PlayAudio(Properties.Media.PlayerPain);
 
                 MoveHome();
             }
@@ -554,6 +565,12 @@ namespace Engine
             {
                 OnMessage(this, new MessageEventArgs(message, addExtraNewLine));
             }
+        }
+
+        private static void PlayAudio(Stream soundToPlay)
+        {
+            SoundPlayer audio = new SoundPlayer(soundToPlay);
+            audio.Play();
         }
     }
 }
