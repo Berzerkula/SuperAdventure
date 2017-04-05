@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("SuperAdventureConsole")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("FedEx")]
+[assembly: AssemblyCompany("Berzerkula.org")]
 [assembly: AssemblyProduct("SuperAdventureConsole")]
-[assembly: AssemblyCopyright("Copyright © FedEx 2017")]
+[assembly: AssemblyCopyright("Copyright © Berzerkula.org 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
