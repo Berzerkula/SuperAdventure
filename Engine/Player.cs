@@ -244,6 +244,9 @@ namespace Engine
 
             if (CurrentMonster.IsDead)
             {
+                RaiseMessage("");
+                RaiseMessage("You defeated the " + CurrentMonster.Name);
+
                 // Place MonsterPain sound based on weapon used
                 if (CurrentWeapon.ID == World.ITEM_ID_RUSTY_SWORD)
                 {
@@ -268,7 +271,6 @@ namespace Engine
         private void LootTheCurrentMonster()
         {
             RaiseMessage("");
-            RaiseMessage("You defeated the " + CurrentMonster.Name);
             RaiseMessage("You receive " + CurrentMonster.RewardExperiencePoints + " experience points");
             RaiseMessage("You receive " + CurrentMonster.RewardGold + " gold");
 
