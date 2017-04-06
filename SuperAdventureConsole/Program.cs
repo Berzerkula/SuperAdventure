@@ -87,6 +87,10 @@ namespace SuperAdventureConsole
             {
                 DisplayHelpText();
             }
+            else if (input == "audio")
+            {
+                ToggleAudio();
+            }
             else if (input == "stats")
             {
                 DisplayPlayerStats();
@@ -199,6 +203,7 @@ namespace SuperAdventureConsole
         {
             Console.WriteLine("Available commands");
             Console.WriteLine("====================================");
+            Console.WriteLine("Audio - Enable/Disable Audio (enabled by default)");
             Console.WriteLine("Stats - Display player information");
             Console.WriteLine("Look - Get the description of your location");
             Console.WriteLine("Inventory - Display your inventory");
@@ -467,6 +472,12 @@ namespace SuperAdventureConsole
             File.WriteAllText(PLAYER_DATA_FILE_NAME, _player.ToXmlString());
 
             PlayerDataMapper.SaveToDatabase(_player);
+        }
+
+        private static void ToggleAudio()
+        {
+            _player.DisableAudio = !_player.DisableAudio;
+            Console.WriteLine("Audio disabled is: {0}", _player.DisableAudio);
         }
     }
 }
