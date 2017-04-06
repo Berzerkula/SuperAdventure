@@ -232,7 +232,7 @@ namespace Engine
                 RaiseMessage("You missed the " + CurrentMonster.Name);
 
                 // Place AttackMiss sound
-                PlayAudio("AttackMiss", _disableAudio);
+                PlayAudio("AttackMiss", DisableAudio);
             }
             else
             {
@@ -242,11 +242,11 @@ namespace Engine
                 // Place SwordHit or ClubHit sound
                 if (CurrentWeapon.ID == World.ITEM_ID_RUSTY_SWORD)
                 {
-                    PlayAudio("SwordHit", _disableAudio);
+                    PlayAudio("SwordHit", DisableAudio);
                 }
                 else if (CurrentWeapon.ID == World.ITEM_ID_CLUB)
                 {
-                    PlayAudio("ClubHit", _disableAudio);
+                    PlayAudio("ClubHit", DisableAudio);
                 }
             }
 
@@ -258,11 +258,11 @@ namespace Engine
                 // Place MonsterPain sound based on weapon used
                 if (CurrentWeapon.ID == World.ITEM_ID_RUSTY_SWORD)
                 {
-                    PlayAudio("MonsterPainSword", _disableAudio);
+                    PlayAudio("MonsterPainSword", DisableAudio);
                 }
                 else if (CurrentWeapon.ID == World.ITEM_ID_CLUB)
                 {
-                    PlayAudio("MonsterPainClub", _disableAudio);
+                    PlayAudio("MonsterPainClub", DisableAudio);
                 }
 
                 LootTheCurrentMonster();
@@ -528,7 +528,7 @@ namespace Engine
                 RaiseMessage("The " + CurrentMonster.Name + " killed you.");
 
                 // Place PlayerPain sound here
-                PlayAudio("PlayerPain", _disableAudio);
+                PlayAudio("PlayerPain", DisableAudio);
 
                 MoveHome();
             }
