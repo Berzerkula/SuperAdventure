@@ -228,5 +228,17 @@ namespace SuperAdventure
         {
             rtbMessages.Clear();
         }
+
+        private void chkbxSndDisable_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkbxSndDisable.Checked)
+            {
+                _player.DisableAudio = true;
+            }
+            else
+            {
+                _player.DisableAudio = false;
+            }
+        }
     }
 }

@@ -55,6 +55,7 @@
             this.dgvQuests = new System.Windows.Forms.DataGridView();
             this.btnClearRtbMessages = new System.Windows.Forms.Button();
             this.btnTrade = new System.Windows.Forms.Button();
+            this.chkbxSndDisable = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuests)).BeginInit();
             this.SuspendLayout();
@@ -344,7 +345,7 @@
             // btnClearRtbMessages
             // 
             this.btnClearRtbMessages.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearRtbMessages.Location = new System.Drawing.Point(632, 427);
+            this.btnClearRtbMessages.Location = new System.Drawing.Point(347, 422);
             this.btnClearRtbMessages.Name = "btnClearRtbMessages";
             this.btnClearRtbMessages.Size = new System.Drawing.Size(75, 23);
             this.btnClearRtbMessages.TabIndex = 21;
@@ -364,6 +365,20 @@
             this.btnTrade.UseVisualStyleBackColor = false;
             this.btnTrade.Click += new System.EventHandler(this.btnTrade_Click);
             // 
+            // chkbxSndDisable
+            // 
+            this.chkbxSndDisable.BackColor = System.Drawing.Color.Transparent;
+            this.chkbxSndDisable.Cursor = System.Windows.Forms.Cursors.Default;
+            this.chkbxSndDisable.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkbxSndDisable.ForeColor = System.Drawing.Color.Gainsboro;
+            this.chkbxSndDisable.Location = new System.Drawing.Point(603, 422);
+            this.chkbxSndDisable.Name = "chkbxSndDisable";
+            this.chkbxSndDisable.Size = new System.Drawing.Size(104, 24);
+            this.chkbxSndDisable.TabIndex = 22;
+            this.chkbxSndDisable.Text = "Snd Disable";
+            this.chkbxSndDisable.UseVisualStyleBackColor = false;
+            this.chkbxSndDisable.CheckedChanged += new System.EventHandler(this.chkbxSndDisable_CheckedChanged);
+            // 
             // SuperAdventure
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -371,6 +386,7 @@
             this.BackgroundImage = global::SuperAdventure.Properties.Resources.UIbackGround;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(727, 663);
+            this.Controls.Add(this.chkbxSndDisable);
             this.Controls.Add(this.dgvQuests);
             this.Controls.Add(this.dgvInventory);
             this.Controls.Add(this.rtbMessages);
@@ -429,6 +445,7 @@
         private System.Windows.Forms.RichTextBox rtbMessages;
         private System.Windows.Forms.DataGridView dgvInventory;
         private System.Windows.Forms.DataGridView dgvQuests;
+        private System.Windows.Forms.CheckBox chkbxSndDisable;
     }
 }
 

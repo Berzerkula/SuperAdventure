@@ -13,6 +13,7 @@ namespace Engine
         private int _gold;
         private int _experiencePoints;
         private Location _currentLocation;
+        private bool _disableAudio;
 
         public event EventHandler<MessageEventArgs> OnMessage;
 
@@ -52,6 +53,12 @@ namespace Engine
             }
         }
 
+        public bool DisableAudio
+        {
+            get { return _disableAudio; }
+            set { _disableAudio = value; }
+        }
+
         public Weapon CurrentWeapon { get; set; }
 
         public BindingList<InventoryItem> Inventory { get; set; }
@@ -70,9 +77,10 @@ namespace Engine
 
         private Monster CurrentMonster { get; set; }
 
-        private Player(int currentHitPoints, int maximumHitPoints, int gold, int experiencePoints) : base(currentHitPoints, maximumHitPoints)
+        private Player(int currentHitPoints, int maximumHitPoints, int gold, int experiencePoints, bool disableAudio) : base(currentHitPoints, maximumHitPoints)
         {
             Gold = gold;
+            DisableAudio = disableAudio;
             ExperiencePoints = experiencePoints;
 
             Inventory = new BindingList<InventoryItem>();
@@ -81,7 +89,7 @@ namespace Engine
 
         public static Player CreateDefaultPlayer()
         {
-            Player player = new Player(10, 10, 20, 0);
+            Player player = new Player(10, 10, 20, 0, false);
             player.CurrentLocation = World.LocationByID(World.LOCATION_ID_HOME);
 
             return player;
@@ -100,7 +108,7 @@ namespace Engine
                 int gold = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/Gold").InnerText);
                 int experiencePoints = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/ExperiencePoints").InnerText);
 
-                Player player = new Player(currentHitPoints, maximumHitPoints, gold, experiencePoints);
+                Player player = new Player(currentHitPoints, maximumHitPoints, gold, experiencePoints, false);
 
                 int currentLocationID = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/CurrentLocation").InnerText);
                 player.CurrentLocation = World.LocationByID(currentLocationID);
@@ -144,7 +152,7 @@ namespace Engine
 
         public static Player CreatePlayerFromDatabase(int currentHitPoints, int maximumHitPoints, int gold, int experiencePoints, int currentLocationID)
         {
-            Player player = new Player(currentHitPoints, maximumHitPoints, gold, experiencePoints);
+            Player player = new Player(currentHitPoints, maximumHitPoints, gold, experiencePoints, false);
 
             player.MoveTo(World.LocationByID(currentLocationID));
 
@@ -224,7 +232,7 @@ namespace Engine
                 RaiseMessage("You missed the " + CurrentMonster.Name);
 
                 // Place AttackMiss sound
-                PlayAudio("AttackMiss");
+                PlayAudio("AttackMiss", _disableAudio);
             }
             else
             {
@@ -234,11 +242,11 @@ namespace Engine
                 // Place SwordHit or ClubHit sound
                 if (CurrentWeapon.ID == World.ITEM_ID_RUSTY_SWORD)
                 {
-                    PlayAudio("SwordHit");
+                    PlayAudio("SwordHit", _disableAudio);
                 }
                 else if (CurrentWeapon.ID == World.ITEM_ID_CLUB)
                 {
-                    PlayAudio("ClubHit");
+                    PlayAudio("ClubHit", _disableAudio);
                 }
             }
 
@@ -250,11 +258,11 @@ namespace Engine
                 // Place MonsterPain sound based on weapon used
                 if (CurrentWeapon.ID == World.ITEM_ID_RUSTY_SWORD)
                 {
-                    PlayAudio("MonsterPainSword");
+                    PlayAudio("MonsterPainSword", _disableAudio);
                 }
                 else if (CurrentWeapon.ID == World.ITEM_ID_CLUB)
                 {
-                    PlayAudio("MonsterPainClub");
+                    PlayAudio("MonsterPainClub", _disableAudio);
                 }
 
                 LootTheCurrentMonster();
@@ -520,7 +528,7 @@ namespace Engine
                 RaiseMessage("The " + CurrentMonster.Name + " killed you.");
 
                 // Place PlayerPain sound here
-                PlayAudio("PlayerPain");
+                PlayAudio("PlayerPain", _disableAudio);
 
                 MoveHome();
             }
@@ -576,12 +584,15 @@ namespace Engine
             }
         }
 
-        private static void PlayAudio(string soundToPlay)
+        private static void PlayAudio(string soundToPlay, bool disabled)
         {
-            SoundPlayer audio;
-            Stream s = Engine.Properties.Media.ResourceManager.GetStream(soundToPlay);
-            audio = new SoundPlayer(s);
-            audio.PlaySync();
+            if (!disabled)
+            {
+                SoundPlayer audio;
+                Stream s = Engine.Properties.Media.ResourceManager.GetStream(soundToPlay);
+                audio = new SoundPlayer(s);
+                audio.PlaySync();
+            }
         }
     }
 }
