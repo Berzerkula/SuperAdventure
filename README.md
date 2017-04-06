@@ -31,6 +31,11 @@ This repository was created to improve C# programming practices and become more 
 - [ ] Game loads player/vendor state from file or database if available
 * Load vendor data
 
+## Enhancements:
+- [ ] Add sounds during battle for when player/monster dies, attack hit/miss (based on weapon used)
+- [ ] Use images for Locations, Monsters, Player
+- [ ] Option to disable/enable audio (have it enabled by default)
+
 ## What the interface will look like
 
 ![SuperAdventure UI](https://github.com/Berzerkula/SuperAdventure/blob/master/SuperAdventureScreenShots/SuperAdventureScreenshot.png)
