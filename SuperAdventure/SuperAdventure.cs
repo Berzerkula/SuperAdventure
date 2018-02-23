@@ -243,7 +243,9 @@ namespace SuperAdventure
 
         private void btnMap_Click(object sender, EventArgs e)
         {
-
+            WorldMap mapScreen = new WorldMap();
+            mapScreen.StartPosition = FormStartPosition.CenterParent;
+            mapScreen.ShowDialog(this);
         }
     }
 }
