@@ -34,9 +34,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(485, 322);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "WorldMap";
-            this.Text = "WorldMap";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.Text = "World Map";
             this.ResumeLayout(false);
 
         }
