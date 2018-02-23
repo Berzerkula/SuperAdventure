@@ -131,6 +131,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\UIbackGround.bmp" />
+    <EmbeddedResource Include="Resources\Bridge.png" />
+    <EmbeddedResource Include="Resources\FarmFields.png" />
+    <EmbeddedResource Include="Resources\Farmhouse.png" />
+    <EmbeddedResource Include="Resources\HerbalistsGarden.png" />
+    <EmbeddedResource Include="Resources\HerbalistsHut.png" />
+    <EmbeddedResource Include="Resources\Home.png" />
+    <EmbeddedResource Include="Resources\SpiderForest.png" />
+    <EmbeddedResource Include="Resources\TownGate.png" />
+    <EmbeddedResource Include="Resources\TownSquare.png" />
+    <EmbeddedResource Include="Resources\Trader.png" />
     <Content Include="SuperAdventureRPG.ico" />
   </ItemGroup>
   <ItemGroup>
