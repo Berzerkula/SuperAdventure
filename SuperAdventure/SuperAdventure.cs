@@ -240,5 +240,10 @@ namespace SuperAdventure
                 _player.DisableAudio = false;
             }
         }
+
+        private void btnMap_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
