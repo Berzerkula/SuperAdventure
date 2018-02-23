@@ -13,6 +13,11 @@ namespace SuperAdventure
         {
             InitializeComponent();
 
+            /* string[] resources = _thisAssembly.GetManifestResourceNames();
+             * string toDisplay = string.Join(System.Environment.NewLine, resources);
+             * MessageBox.Show(toDisplay);
+             */
+
             SetImage(pic_0_2, "HerbalistsGarden");
             SetImage(pic_1_2, "HerbalistsHut");
             SetImage(pic_2_0, "FarmFields");
@@ -26,10 +31,6 @@ namespace SuperAdventure
 
         private void SetImage(PictureBox pictureBox, string imageName)
         {
-            string[] resources = _thisAssembly.GetManifestResourceNames();
-            string toDisplay = string.Join(System.Environment.NewLine, resources);
-            MessageBox.Show(toDisplay);
-
             using (Stream resourceStream =
             _thisAssembly.GetManifestResourceStream(
                  //_thisAssembly.GetName().Name + ".Resources." + imageName + ".png"))
