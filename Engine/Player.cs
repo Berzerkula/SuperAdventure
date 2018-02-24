@@ -75,6 +75,8 @@ namespace Engine
 
         public BindingList<PlayerQuest> Quests { get; set; }
 
+        public List<int> LocationsVisited { get; set; }
+
         private Monster CurrentMonster { get; set; }
 
         private Player(int currentHitPoints, int maximumHitPoints, int gold, int experiencePoints, bool disableAudio) : base(currentHitPoints, maximumHitPoints)
@@ -85,6 +87,7 @@ namespace Engine
 
             Inventory = new BindingList<InventoryItem>();
             Quests = new BindingList<PlayerQuest>();
+            LocationsVisited = new List<int>();
         }
 
         public static Player CreateDefaultPlayer()
@@ -169,6 +172,11 @@ namespace Engine
 
             // The player can enter this location
             CurrentLocation = location;
+
+            if (!LocationsVisited.Contains(CurrentLocation.ID))
+            {
+                LocationsVisited.Add(CurrentLocation.ID);
+            }
 
             CompletelyHeal();
 
