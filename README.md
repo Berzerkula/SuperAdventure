@@ -39,6 +39,6 @@ This repository was created to improve C# programming practices and become more 
 
 ## What the interface will look like
 
-![SuperAdventure UI](https://github.com/Berzerkula/SuperAdventure/blob/master/SuperAdventureScreenShots/Interface.png)
-![SuperAdventure Trade Screen](https://github.com/Berzerkula/SuperAdventure/blob/master/SuperAdventureScreenShots/Trade.png)
-![SuperAdventure WorldMap](https://github.com/Berzerkula/SuperAdventure/blob/master/SuperAdventureScreenShots/WorldMap.png)
+![SuperAdventure UI](https://github.com/Berzerkula/SuperAdventure/blob/master/Interface.png)
+![SuperAdventure Trade Screen](https://github.com/Berzerkula/SuperAdventure/blob/master/Trade.png)
+![SuperAdventure WorldMap](https://github.com/Berzerkula/SuperAdventure/blob/master/WorldMap.png)
