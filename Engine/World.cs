@@ -37,15 +37,15 @@ namespace Engine
         public const int QUEST_ID_CLEAR_FARMERS_FIELD = 2;
 
         // Locations
-        public const int LOCATION_ID_HOME = 1;
-        public const int LOCATION_ID_TOWN_SQUARE = 2;
-        public const int LOCATION_ID_GUARD_POST = 3;
-        public const int LOCATION_ID_ALCHEMIST_HUT = 4;
-        public const int LOCATION_ID_ALCHEMISTS_GARDEN = 5;
-        public const int LOCATION_ID_FARMHOUSE = 6;
-        public const int LOCATION_ID_FARM_FIELD = 7;
-        public const int LOCATION_ID_BRIDGE = 8;
-        public const int LOCATION_ID_SPIDER_FIELD = 9;
+        public const int LOCATION_ID_HOME = 20;
+        public const int LOCATION_ID_TOWN_SQUARE = 14;
+        public const int LOCATION_ID_GUARD_POST = 15;
+        public const int LOCATION_ID_ALCHEMIST_HUT = 8;
+        public const int LOCATION_ID_ALCHEMISTS_GARDEN = 2;
+        public const int LOCATION_ID_FARMHOUSE = 13;
+        public const int LOCATION_ID_FARM_FIELD = 12;
+        public const int LOCATION_ID_BRIDGE = 16;
+        public const int LOCATION_ID_SPIDER_FIELD = 17;
 
         static World()
         {
