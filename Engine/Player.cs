@@ -122,6 +122,13 @@ namespace Engine
                     player.CurrentWeapon = (Weapon)World.ItemByID(currentWeaponID);
                 }
 
+                foreach (XmlNode node in playerData.SelectNodes("/Player/LocationsVisited/LocationVisited"))
+                {
+                    int id = Convert.ToInt32(node.Attributes["ID"].Value);
+
+                    player.LocationsVisited.Add(id);
+                }
+
                 foreach (XmlNode node in playerData.SelectNodes("/Player/InventoryItems/InventoryItem"))
                 {
                     int id = Convert.ToInt32(node.Attributes["ID"].Value);
@@ -371,6 +378,20 @@ namespace Engine
             if (CurrentWeapon != null)
             {
                 CreateNewChildXmlNode(playerData, stats, "CurrentWeapon", CurrentWeapon.ID);
+            }
+
+            // Create the "LocationsVisited" child node to hold each LocationVisited node
+            XmlNode locationsVisited = playerData.CreateElement("LocationsVisited");
+            player.AppendChild(locationsVisited);
+
+            // Create an "LocationVisited" node for each item in the player's inventory
+            foreach (int locationID in LocationsVisited)
+            {
+                XmlNode locationVisited = playerData.CreateElement("LocationVisited");
+
+                AddXmlAttributeToNode(playerData, locationVisited, "ID", locationID);
+
+                locationsVisited.AppendChild(locationVisited);
             }
 
             // Create the "InventoryItems" child node to hold each InventoryItem node
