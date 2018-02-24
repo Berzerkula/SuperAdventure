@@ -26,15 +26,16 @@ This repository was created to improve C# programming practices and become more 
 - [X] Player turns in items and receives rewards
 - [X] Player can trade items the vendor wants
 - [X] Player can only have one weapon and healing potion in inventory
-- [ ] Game saves player/vendor state to a file or database if available
+- [X] Game saves player/vendor state to a file or database if available
 * Save vendor data
-- [ ] Game loads player/vendor state from file or database if available
+- [X] Game loads player/vendor state from file or database if available
 * Load vendor data
 
 ## Enhancements:
-- [ ] Add sounds during battle for when player/monster dies, attack hit/miss (based on weapon used)
-- [ ] Use images for Locations, Monsters, Player
-- [ ] Option to disable/enable audio (have it enabled by default)
+- [X] Add sounds during battle for when player/monster dies, attack hit/miss (based on weapon used)
+- [X] Use images for Locations, Monsters, Player
+- [X] Option to disable/enable audio (have it enabled by default)
+- [X] Add fog of war for locations not visited
 
 ## What the interface will look like
 
