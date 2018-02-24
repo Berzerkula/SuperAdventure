@@ -81,7 +81,7 @@
             // pic_0_0
             // 
             this.pic_0_0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_0_0.Location = new System.Drawing.Point(0, 1);
+            this.pic_0_0.Location = new System.Drawing.Point(7, 8);
             this.pic_0_0.Name = "pic_0_0";
             this.pic_0_0.Size = new System.Drawing.Size(75, 75);
             this.pic_0_0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -91,7 +91,7 @@
             // pic_0_1
             // 
             this.pic_0_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_0_1.Location = new System.Drawing.Point(81, 1);
+            this.pic_0_1.Location = new System.Drawing.Point(88, 8);
             this.pic_0_1.Name = "pic_0_1";
             this.pic_0_1.Size = new System.Drawing.Size(75, 75);
             this.pic_0_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -101,7 +101,7 @@
             // pic_0_2
             // 
             this.pic_0_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_0_2.Location = new System.Drawing.Point(162, 1);
+            this.pic_0_2.Location = new System.Drawing.Point(169, 8);
             this.pic_0_2.Name = "pic_0_2";
             this.pic_0_2.Size = new System.Drawing.Size(75, 75);
             this.pic_0_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -111,7 +111,7 @@
             // pic_0_3
             // 
             this.pic_0_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_0_3.Location = new System.Drawing.Point(243, 1);
+            this.pic_0_3.Location = new System.Drawing.Point(250, 8);
             this.pic_0_3.Name = "pic_0_3";
             this.pic_0_3.Size = new System.Drawing.Size(75, 75);
             this.pic_0_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -121,7 +121,7 @@
             // pic_0_4
             // 
             this.pic_0_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_0_4.Location = new System.Drawing.Point(324, 1);
+            this.pic_0_4.Location = new System.Drawing.Point(331, 8);
             this.pic_0_4.Name = "pic_0_4";
             this.pic_0_4.Size = new System.Drawing.Size(75, 75);
             this.pic_0_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -131,7 +131,7 @@
             // pic_0_5
             // 
             this.pic_0_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_0_5.Location = new System.Drawing.Point(405, 1);
+            this.pic_0_5.Location = new System.Drawing.Point(412, 8);
             this.pic_0_5.Name = "pic_0_5";
             this.pic_0_5.Size = new System.Drawing.Size(75, 75);
             this.pic_0_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -141,7 +141,7 @@
             // pic_1_0
             // 
             this.pic_1_0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_1_0.Location = new System.Drawing.Point(0, 82);
+            this.pic_1_0.Location = new System.Drawing.Point(7, 89);
             this.pic_1_0.Name = "pic_1_0";
             this.pic_1_0.Size = new System.Drawing.Size(75, 75);
             this.pic_1_0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -151,7 +151,7 @@
             // pic_1_1
             // 
             this.pic_1_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_1_1.Location = new System.Drawing.Point(81, 82);
+            this.pic_1_1.Location = new System.Drawing.Point(88, 89);
             this.pic_1_1.Name = "pic_1_1";
             this.pic_1_1.Size = new System.Drawing.Size(75, 75);
             this.pic_1_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -161,7 +161,7 @@
             // pic_1_2
             // 
             this.pic_1_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_1_2.Location = new System.Drawing.Point(162, 82);
+            this.pic_1_2.Location = new System.Drawing.Point(169, 89);
             this.pic_1_2.Name = "pic_1_2";
             this.pic_1_2.Size = new System.Drawing.Size(75, 75);
             this.pic_1_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -171,7 +171,7 @@
             // pic_1_3
             // 
             this.pic_1_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_1_3.Location = new System.Drawing.Point(243, 82);
+            this.pic_1_3.Location = new System.Drawing.Point(250, 89);
             this.pic_1_3.Name = "pic_1_3";
             this.pic_1_3.Size = new System.Drawing.Size(75, 75);
             this.pic_1_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -181,7 +181,7 @@
             // pic_1_4
             // 
             this.pic_1_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_1_4.Location = new System.Drawing.Point(324, 82);
+            this.pic_1_4.Location = new System.Drawing.Point(331, 89);
             this.pic_1_4.Name = "pic_1_4";
             this.pic_1_4.Size = new System.Drawing.Size(75, 75);
             this.pic_1_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -191,7 +191,7 @@
             // pic_1_5
             // 
             this.pic_1_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_1_5.Location = new System.Drawing.Point(405, 82);
+            this.pic_1_5.Location = new System.Drawing.Point(412, 89);
             this.pic_1_5.Name = "pic_1_5";
             this.pic_1_5.Size = new System.Drawing.Size(75, 75);
             this.pic_1_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -201,7 +201,7 @@
             // pic_2_0
             // 
             this.pic_2_0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_2_0.Location = new System.Drawing.Point(0, 163);
+            this.pic_2_0.Location = new System.Drawing.Point(7, 170);
             this.pic_2_0.Name = "pic_2_0";
             this.pic_2_0.Size = new System.Drawing.Size(75, 75);
             this.pic_2_0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -211,7 +211,7 @@
             // pic_2_1
             // 
             this.pic_2_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_2_1.Location = new System.Drawing.Point(81, 163);
+            this.pic_2_1.Location = new System.Drawing.Point(88, 170);
             this.pic_2_1.Name = "pic_2_1";
             this.pic_2_1.Size = new System.Drawing.Size(75, 75);
             this.pic_2_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -221,7 +221,7 @@
             // pic_2_2
             // 
             this.pic_2_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_2_2.Location = new System.Drawing.Point(162, 163);
+            this.pic_2_2.Location = new System.Drawing.Point(169, 170);
             this.pic_2_2.Name = "pic_2_2";
             this.pic_2_2.Size = new System.Drawing.Size(75, 75);
             this.pic_2_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -231,7 +231,7 @@
             // pic_2_3
             // 
             this.pic_2_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_2_3.Location = new System.Drawing.Point(243, 163);
+            this.pic_2_3.Location = new System.Drawing.Point(250, 170);
             this.pic_2_3.Name = "pic_2_3";
             this.pic_2_3.Size = new System.Drawing.Size(75, 75);
             this.pic_2_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -241,7 +241,7 @@
             // pic_2_4
             // 
             this.pic_2_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_2_4.Location = new System.Drawing.Point(324, 163);
+            this.pic_2_4.Location = new System.Drawing.Point(331, 170);
             this.pic_2_4.Name = "pic_2_4";
             this.pic_2_4.Size = new System.Drawing.Size(75, 75);
             this.pic_2_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -251,7 +251,7 @@
             // pic_2_5
             // 
             this.pic_2_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_2_5.Location = new System.Drawing.Point(405, 163);
+            this.pic_2_5.Location = new System.Drawing.Point(412, 170);
             this.pic_2_5.Name = "pic_2_5";
             this.pic_2_5.Size = new System.Drawing.Size(75, 75);
             this.pic_2_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -261,7 +261,7 @@
             // pic_3_0
             // 
             this.pic_3_0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_3_0.Location = new System.Drawing.Point(0, 244);
+            this.pic_3_0.Location = new System.Drawing.Point(7, 251);
             this.pic_3_0.Name = "pic_3_0";
             this.pic_3_0.Size = new System.Drawing.Size(75, 75);
             this.pic_3_0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -271,7 +271,7 @@
             // pic_3_1
             // 
             this.pic_3_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_3_1.Location = new System.Drawing.Point(81, 244);
+            this.pic_3_1.Location = new System.Drawing.Point(88, 251);
             this.pic_3_1.Name = "pic_3_1";
             this.pic_3_1.Size = new System.Drawing.Size(75, 75);
             this.pic_3_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -281,7 +281,7 @@
             // pic_3_2
             // 
             this.pic_3_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_3_2.Location = new System.Drawing.Point(162, 244);
+            this.pic_3_2.Location = new System.Drawing.Point(169, 251);
             this.pic_3_2.Name = "pic_3_2";
             this.pic_3_2.Size = new System.Drawing.Size(75, 75);
             this.pic_3_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -291,7 +291,7 @@
             // pic_3_3
             // 
             this.pic_3_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_3_3.Location = new System.Drawing.Point(243, 244);
+            this.pic_3_3.Location = new System.Drawing.Point(250, 251);
             this.pic_3_3.Name = "pic_3_3";
             this.pic_3_3.Size = new System.Drawing.Size(75, 75);
             this.pic_3_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -301,7 +301,7 @@
             // pic_3_4
             // 
             this.pic_3_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_3_4.Location = new System.Drawing.Point(324, 244);
+            this.pic_3_4.Location = new System.Drawing.Point(331, 251);
             this.pic_3_4.Name = "pic_3_4";
             this.pic_3_4.Size = new System.Drawing.Size(75, 75);
             this.pic_3_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -311,7 +311,7 @@
             // pic_3_5
             // 
             this.pic_3_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_3_5.Location = new System.Drawing.Point(405, 244);
+            this.pic_3_5.Location = new System.Drawing.Point(412, 251);
             this.pic_3_5.Name = "pic_3_5";
             this.pic_3_5.Size = new System.Drawing.Size(75, 75);
             this.pic_3_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -322,7 +322,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(485, 322);
+            this.ClientSize = new System.Drawing.Size(494, 335);
             this.Controls.Add(this.pic_3_5);
             this.Controls.Add(this.pic_3_4);
             this.Controls.Add(this.pic_3_3);
