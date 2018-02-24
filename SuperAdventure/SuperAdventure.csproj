@@ -150,6 +150,7 @@
     <EmbeddedResource Include="Resources\TownGate.png" />
     <EmbeddedResource Include="Resources\TownSquare.png" />
     <EmbeddedResource Include="Resources\Trader.png" />
+    <EmbeddedResource Include="Resources\FogLocation.png" />
     <Content Include="SuperAdventureRPG.ico" />
   </ItemGroup>
   <ItemGroup>
