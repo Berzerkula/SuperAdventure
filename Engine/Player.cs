@@ -164,7 +164,8 @@ namespace Engine
         {
             Player player = new Player(currentHitPoints, maximumHitPoints, gold, experiencePoints, false);
 
-            player.MoveTo(World.LocationByID(currentLocationID));
+            //Comment the following for a bug when storing game data with an SQL database
+            //player.MoveTo(World.LocationByID(currentLocationID));
 
             return player;
         }
